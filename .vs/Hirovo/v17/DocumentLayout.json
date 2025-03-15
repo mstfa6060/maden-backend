@@ -1,0 +1,301 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projects\\Hirovo\\HirovoBackend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E5A110F5-B5A5-483E-ACFB-4C8FD1441E16}|Common\\Definitions\\Common.Definitions.Infrastructure\\Common.Definitions.Infrastructure.csproj|d:\\projects\\hirovo\\HirovoBackend\\common\\definitions\\common.definitions.infrastructure\\services\\definitiondbvalidationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5A110F5-B5A5-483E-ACFB-4C8FD1441E16}|Common\\Definitions\\Common.Definitions.Infrastructure\\Common.Definitions.Infrastructure.csproj|solutionrelative:common\\definitions\\common.definitions.infrastructure\\services\\definitiondbvalidationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92546B8C-40F0-4C4B-B98D-10AA6CEAB5FF}|Common\\Services\\Common.Services.ErrorCodeGenerator\\Common.Services.ErrorCodeGenerator.csproj|d:\\projects\\hirovo\\HirovoBackend\\common\\services\\common.services.errorcodegenerator\\errorcodegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92546B8C-40F0-4C4B-B98D-10AA6CEAB5FF}|Common\\Services\\Common.Services.ErrorCodeGenerator\\Common.Services.ErrorCodeGenerator.csproj|solutionrelative:common\\services\\common.services.errorcodegenerator\\errorcodegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92546B8C-40F0-4C4B-B98D-10AA6CEAB5FF}|Common\\Services\\Common.Services.ErrorCodeGenerator\\Common.Services.ErrorCodeGenerator.csproj|d:\\projects\\hirovo\\HirovoBackend\\common\\services\\common.services.errorcodegenerator\\common.services.errorcodegenerator.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{92546B8C-40F0-4C4B-B98D-10AA6CEAB5FF}|Common\\Services\\Common.Services.ErrorCodeGenerator\\Common.Services.ErrorCodeGenerator.csproj|solutionrelative:common\\services\\common.services.errorcodegenerator\\common.services.errorcodegenerator.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B2F1E10-9005-48C2-8C9E-03538D9F356E}|Jobs\\RelationalDB\\MigrationJob\\Jobs.RelationalDB.MigrationJob.csproj|d:\\projects\\hirovo\\HirovoBackend\\jobs\\relationaldb\\migrationjob\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B2F1E10-9005-48C2-8C9E-03538D9F356E}|Jobs\\RelationalDB\\MigrationJob\\Jobs.RelationalDB.MigrationJob.csproj|solutionrelative:jobs\\relationaldb\\migrationjob\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B2F1E10-9005-48C2-8C9E-03538D9F356E}|Jobs\\RelationalDB\\MigrationJob\\Jobs.RelationalDB.MigrationJob.csproj|d:\\projects\\hirovo\\HirovoBackend\\jobs\\relationaldb\\migrationjob\\migrations\\database\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B2F1E10-9005-48C2-8C9E-03538D9F356E}|Jobs\\RelationalDB\\MigrationJob\\Jobs.RelationalDB.MigrationJob.csproj|solutionrelative:jobs\\relationaldb\\migrationjob\\migrations\\database\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B2F1E10-9005-48C2-8C9E-03538D9F356E}|Jobs\\RelationalDB\\MigrationJob\\Jobs.RelationalDB.MigrationJob.csproj|d:\\projects\\hirovo\\HirovoBackend\\jobs\\relationaldb\\migrationjob\\migrations\\database\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B2F1E10-9005-48C2-8C9E-03538D9F356E}|Jobs\\RelationalDB\\MigrationJob\\Jobs.RelationalDB.MigrationJob.csproj|solutionrelative:jobs\\relationaldb\\migrationjob\\migrations\\database\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7294632-E8EF-46DA-B3C0-72A5B64406FC}|BaseModules\\IAM\\BaseModules.IAM.Application\\BaseModules.IAM.Application.csproj|d:\\projects\\hirovo\\HirovoBackend\\basemodules\\iam\\basemodules.iam.application\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7294632-E8EF-46DA-B3C0-72A5B64406FC}|BaseModules\\IAM\\BaseModules.IAM.Application\\BaseModules.IAM.Application.csproj|solutionrelative:basemodules\\iam\\basemodules.iam.application\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7294632-E8EF-46DA-B3C0-72A5B64406FC}|BaseModules\\IAM\\BaseModules.IAM.Application\\BaseModules.IAM.Application.csproj|d:\\projects\\hirovo\\HirovoBackend\\basemodules\\iam\\basemodules.iam.application\\basemodules.iam.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F7294632-E8EF-46DA-B3C0-72A5B64406FC}|BaseModules\\IAM\\BaseModules.IAM.Application\\BaseModules.IAM.Application.csproj|solutionrelative:basemodules\\iam\\basemodules.iam.application\\basemodules.iam.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B787B5D1-F547-48BF-91AF-25225B4F6F16}|BaseModules\\IAM\\BaseModules.IAM.Infrastructure\\BaseModules.IAM.Infrastructure.csproj|d:\\projects\\hirovo\\HirovoBackend\\basemodules\\iam\\basemodules.iam.infrastructure\\relationaldb\\iamdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B787B5D1-F547-48BF-91AF-25225B4F6F16}|BaseModules\\IAM\\BaseModules.IAM.Infrastructure\\BaseModules.IAM.Infrastructure.csproj|solutionrelative:basemodules\\iam\\basemodules.iam.infrastructure\\relationaldb\\iamdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B787B5D1-F547-48BF-91AF-25225B4F6F16}|BaseModules\\IAM\\BaseModules.IAM.Infrastructure\\BaseModules.IAM.Infrastructure.csproj|d:\\projects\\hirovo\\HirovoBackend\\basemodules\\iam\\basemodules.iam.infrastructure\\relationaldb\\idefinitiondbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B787B5D1-F547-48BF-91AF-25225B4F6F16}|BaseModules\\IAM\\BaseModules.IAM.Infrastructure\\BaseModules.IAM.Infrastructure.csproj|solutionrelative:basemodules\\iam\\basemodules.iam.infrastructure\\relationaldb\\idefinitiondbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2F633A8-C105-46E2-B8F7-A4EA1E9B33A4}|Common\\Domain\\Common.Domain.Base\\Common.Domain.Base.csproj|d:\\projects\\hirovo\\HirovoBackend\\common\\domain\\common.domain.base\\logics\\customextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2F633A8-C105-46E2-B8F7-A4EA1E9B33A4}|Common\\Domain\\Common.Domain.Base\\Common.Domain.Base.csproj|solutionrelative:common\\domain\\common.domain.base\\logics\\customextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2F633A8-C105-46E2-B8F7-A4EA1E9B33A4}|Common\\Domain\\Common.Domain.Base\\Common.Domain.Base.csproj|d:\\projects\\hirovo\\HirovoBackend\\common\\domain\\common.domain.base\\entity\\itenantentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2F633A8-C105-46E2-B8F7-A4EA1E9B33A4}|Common\\Domain\\Common.Domain.Base\\Common.Domain.Base.csproj|solutionrelative:common\\domain\\common.domain.base\\entity\\itenantentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2F633A8-C105-46E2-B8F7-A4EA1E9B33A4}|Common\\Domain\\Common.Domain.Base\\Common.Domain.Base.csproj|d:\\projects\\hirovo\\HirovoBackend\\common\\domain\\common.domain.base\\entity\\coreentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2F633A8-C105-46E2-B8F7-A4EA1E9B33A4}|Common\\Domain\\Common.Domain.Base\\Common.Domain.Base.csproj|solutionrelative:common\\domain\\common.domain.base\\entity\\coreentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2F633A8-C105-46E2-B8F7-A4EA1E9B33A4}|Common\\Domain\\Common.Domain.Base\\Common.Domain.Base.csproj|d:\\projects\\hirovo\\HirovoBackend\\common\\domain\\common.domain.base\\entity\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2F633A8-C105-46E2-B8F7-A4EA1E9B33A4}|Common\\Domain\\Common.Domain.Base\\Common.Domain.Base.csproj|solutionrelative:common\\domain\\common.domain.base\\entity\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{5a4e9529-b6a0-46b5-be4f-0f0b239bc0eb}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{4a9b7e51-aa16-11d0-a8c5-00a0c921a4d2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DefinitionDbValidationService.cs",
+              "DocumentMoniker": "D:\\Projects\\Hirovo\\HirovoBackend\\Common\\Definitions\\Common.Definitions.Infrastructure\\Services\\DefinitionDbValidationService.cs",
+              "RelativeDocumentMoniker": "Common\\Definitions\\Common.Definitions.Infrastructure\\Services\\DefinitionDbValidationService.cs",
+              "ToolTip": "D:\\Projects\\Hirovo\\HirovoBackend\\Common\\Definitions\\Common.Definitions.Infrastructure\\Services\\DefinitionDbValidationService.cs",
+              "RelativeToolTip": "Common\\Definitions\\Common.Definitions.Infrastructure\\Services\\DefinitionDbValidationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T19:40:42.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ErrorCodeGenerator.cs",
+              "DocumentMoniker": "D:\\Projects\\Hirovo\\HirovoBackend\\Common\\Services\\Common.Services.ErrorCodeGenerator\\ErrorCodeGenerator.cs",
+              "RelativeDocumentMoniker": "Common\\Services\\Common.Services.ErrorCodeGenerator\\ErrorCodeGenerator.cs",
+              "ToolTip": "D:\\Projects\\Hirovo\\HirovoBackend\\Common\\Services\\Common.Services.ErrorCodeGenerator\\ErrorCodeGenerator.cs",
+              "RelativeToolTip": "Common\\Services\\Common.Services.ErrorCodeGenerator\\ErrorCodeGenerator.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAD4vyYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T19:40:29.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Common.Services.ErrorCodeGenerator",
+              "DocumentMoniker": "D:\\Projects\\Hirovo\\HirovoBackend\\Common\\Services\\Common.Services.ErrorCodeGenerator\\Common.Services.ErrorCodeGenerator.csproj",
+              "RelativeDocumentMoniker": "Common\\Services\\Common.Services.ErrorCodeGenerator\\Common.Services.ErrorCodeGenerator.csproj",
+              "ToolTip": "D:\\Projects\\Hirovo\\HirovoBackend\\Common\\Services\\Common.Services.ErrorCodeGenerator\\Common.Services.ErrorCodeGenerator.csproj",
+              "RelativeToolTip": "Common\\Services\\Common.Services.ErrorCodeGenerator\\Common.Services.ErrorCodeGenerator.csproj",
+              "ViewState": "AgIAAAIAAAAwwnYGggUvwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-12T19:40:25.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationDbContextFactory.cs",
+              "DocumentMoniker": "D:\\Projects\\Hirovo\\HirovoBackend\\Jobs\\RelationalDB\\MigrationJob\\Migrations\\Database\\ApplicationDbContextFactory.cs",
+              "RelativeDocumentMoniker": "Jobs\\RelationalDB\\MigrationJob\\Migrations\\Database\\ApplicationDbContextFactory.cs",
+              "ToolTip": "D:\\Projects\\Hirovo\\HirovoBackend\\Jobs\\RelationalDB\\MigrationJob\\Migrations\\Database\\ApplicationDbContextFactory.cs",
+              "RelativeToolTip": "Jobs\\RelationalDB\\MigrationJob\\Migrations\\Database\\ApplicationDbContextFactory.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAqwBoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T19:36:55.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\Projects\\Hirovo\\HirovoBackend\\Jobs\\RelationalDB\\MigrationJob\\Migrations\\Database\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Jobs\\RelationalDB\\MigrationJob\\Migrations\\Database\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\Projects\\Hirovo\\HirovoBackend\\Jobs\\RelationalDB\\MigrationJob\\Migrations\\Database\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Jobs\\RelationalDB\\MigrationJob\\Migrations\\Database\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T19:36:15.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projects\\Hirovo\\HirovoBackend\\Jobs\\RelationalDB\\MigrationJob\\Program.cs",
+              "RelativeDocumentMoniker": "Jobs\\RelationalDB\\MigrationJob\\Program.cs",
+              "ToolTip": "D:\\Projects\\Hirovo\\HirovoBackend\\Jobs\\RelationalDB\\MigrationJob\\Program.cs",
+              "RelativeToolTip": "Jobs\\RelationalDB\\MigrationJob\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T19:36:10.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BaseModules.IAM.Application.csproj",
+              "DocumentMoniker": "D:\\Projects\\Hirovo\\HirovoBackend\\BaseModules\\IAM\\BaseModules.IAM.Application\\BaseModules.IAM.Application.csproj",
+              "RelativeDocumentMoniker": "BaseModules\\IAM\\BaseModules.IAM.Application\\BaseModules.IAM.Application.csproj",
+              "ToolTip": "D:\\Projects\\Hirovo\\HirovoBackend\\BaseModules\\IAM\\BaseModules.IAM.Application\\BaseModules.IAM.Application.csproj",
+              "RelativeToolTip": "BaseModules\\IAM\\BaseModules.IAM.Application\\BaseModules.IAM.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-09T12:45:18.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GlobalUsing.cs",
+              "DocumentMoniker": "D:\\Projects\\Hirovo\\HirovoBackend\\BaseModules\\IAM\\BaseModules.IAM.Application\\GlobalUsing.cs",
+              "RelativeDocumentMoniker": "BaseModules\\IAM\\BaseModules.IAM.Application\\GlobalUsing.cs",
+              "ToolTip": "D:\\Projects\\Hirovo\\HirovoBackend\\BaseModules\\IAM\\BaseModules.IAM.Application\\GlobalUsing.cs",
+              "RelativeToolTip": "BaseModules\\IAM\\BaseModules.IAM.Application\\GlobalUsing.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAArwDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T12:43:05.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IDefinitionDbContext.cs",
+              "DocumentMoniker": "D:\\Projects\\Hirovo\\HirovoBackend\\BaseModules\\IAM\\BaseModules.IAM.Infrastructure\\RelationalDB\\IDefinitionDbContext.cs",
+              "RelativeDocumentMoniker": "BaseModules\\IAM\\BaseModules.IAM.Infrastructure\\RelationalDB\\IDefinitionDbContext.cs",
+              "ToolTip": "D:\\Projects\\Hirovo\\HirovoBackend\\BaseModules\\IAM\\BaseModules.IAM.Infrastructure\\RelationalDB\\IDefinitionDbContext.cs",
+              "RelativeToolTip": "BaseModules\\IAM\\BaseModules.IAM.Infrastructure\\RelationalDB\\IDefinitionDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T12:38:59.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CustomExtensions.cs",
+              "DocumentMoniker": "D:\\Projects\\Hirovo\\HirovoBackend\\Common\\Domain\\Common.Domain.Base\\Logics\\CustomExtensions.cs",
+              "RelativeDocumentMoniker": "Common\\Domain\\Common.Domain.Base\\Logics\\CustomExtensions.cs",
+              "ToolTip": "D:\\Projects\\Hirovo\\HirovoBackend\\Common\\Domain\\Common.Domain.Base\\Logics\\CustomExtensions.cs",
+              "RelativeToolTip": "Common\\Domain\\Common.Domain.Base\\Logics\\CustomExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T12:38:00.154Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ITenantEntity.cs",
+              "DocumentMoniker": "D:\\Projects\\Hirovo\\HirovoBackend\\Common\\Domain\\Common.Domain.Base\\Entity\\ITenantEntity.cs",
+              "RelativeDocumentMoniker": "Common\\Domain\\Common.Domain.Base\\Entity\\ITenantEntity.cs",
+              "ToolTip": "D:\\Projects\\Hirovo\\HirovoBackend\\Common\\Domain\\Common.Domain.Base\\Entity\\ITenantEntity.cs",
+              "RelativeToolTip": "Common\\Domain\\Common.Domain.Base\\Entity\\ITenantEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T12:37:51.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CoreEntity.cs",
+              "DocumentMoniker": "D:\\Projects\\Hirovo\\HirovoBackend\\Common\\Domain\\Common.Domain.Base\\Entity\\CoreEntity.cs",
+              "RelativeDocumentMoniker": "Common\\Domain\\Common.Domain.Base\\Entity\\CoreEntity.cs",
+              "ToolTip": "D:\\Projects\\Hirovo\\HirovoBackend\\Common\\Domain\\Common.Domain.Base\\Entity\\CoreEntity.cs",
+              "RelativeToolTip": "Common\\Domain\\Common.Domain.Base\\Entity\\CoreEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T12:36:08.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "D:\\Projects\\Hirovo\\HirovoBackend\\Common\\Domain\\Common.Domain.Base\\Entity\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Common\\Domain\\Common.Domain.Base\\Entity\\BaseEntity.cs",
+              "ToolTip": "D:\\Projects\\Hirovo\\HirovoBackend\\Common\\Domain\\Common.Domain.Base\\Entity\\BaseEntity.cs",
+              "RelativeToolTip": "Common\\Domain\\Common.Domain.Base\\Entity\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T12:36:02.96Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IamDbContext.cs",
+              "DocumentMoniker": "D:\\Projects\\Hirovo\\HirovoBackend\\BaseModules\\IAM\\BaseModules.IAM.Infrastructure\\RelationalDB\\IamDbContext.cs",
+              "RelativeDocumentMoniker": "BaseModules\\IAM\\BaseModules.IAM.Infrastructure\\RelationalDB\\IamDbContext.cs",
+              "ToolTip": "D:\\Projects\\Hirovo\\HirovoBackend\\BaseModules\\IAM\\BaseModules.IAM.Infrastructure\\RelationalDB\\IamDbContext.cs",
+              "RelativeToolTip": "BaseModules\\IAM\\BaseModules.IAM.Infrastructure\\RelationalDB\\IamDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T12:35:55.524Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 193,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

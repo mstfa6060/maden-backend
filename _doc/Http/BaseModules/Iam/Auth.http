@@ -1,0 +1,19 @@
+
+ @Url= http://localhost:5000
+# @Url= https://api-test.toprak.tkholding.com.tr/koopposbackoffice
+
+//merve.dursun
+  @Jwt = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIyNjA4MDZlMS1lZjJiLTQ2MDMtYmViOS0wOGRiZDYyMjYzMTQiLCJnaXZlbl9uYW1lIjoibWVydmUuZHVyc3VuIiwidW5pcXVlX25hbWUiOiJNZXJ2ZSBEVVJTVU4iLCJ0ZW5hbnRpZCI6IjhhNzc5ODE0LTY2MGEtNGFmNS1iNzc1LTU5OTFkZjRhYjdiZiIsImRlcGFydG1lbnRJZCI6IjUwYTIzMmNhLWVlOWEtNDM2MC0yMGMwLTA4ZGJmYTUwNzc5OCIsInBsYXRmb3JtIjoiMCIsIm5iZiI6MTcxOTgyMjE3NCwiZXhwIjoxNzIwMDgxMzc0LCJpYXQiOjE3MTk4MjIxNzQsImF1ZCI6ImlhbS50b3ByYWsudGtob2xkaW5nLmNvbS50ciJ9.GhfyNoNSBNCDSxHErN8tAtla1RKdlMyFxJDsYbTlB84
+
+
+
+### Create
+POST {{Url}}/Roles/Create
+Authorization: Bearer {{Jwt}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": "d290f1ee-6c54-4b01-90e6-d701748f0851",
+  "name": "Admin"
+}

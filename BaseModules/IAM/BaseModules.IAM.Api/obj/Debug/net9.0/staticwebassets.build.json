@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "2LkozkXjo8kjNCEhHiCDMap398VHQRz1JhbQoBZndd0=",
+  "Source": "BaseModules.IAM.Api",
+  "BasePath": "_content/BaseModules.IAM.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\BusinessModules.Job.Api.props" />
+</Project>
