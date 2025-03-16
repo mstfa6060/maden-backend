@@ -197,7 +197,6 @@ D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Api\obj\Debug\n
 D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Api\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.BaseModules.IAM.Api.props
 D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Api\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.BaseModules.IAM.Api.props
 D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Api\obj\Debug\net8.0\staticwebassets.pack.json
-D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Api\obj\Debug\net8.0\BaseModu.01C8C675.Up2Date
 D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Api\obj\Debug\net8.0\BaseModules.IAM.Api.dll
 D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Api\obj\Debug\net8.0\refint\BaseModules.IAM.Api.dll
