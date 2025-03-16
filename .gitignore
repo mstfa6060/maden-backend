@@ -1,10 +1,10 @@
-# Derleme Klasörlerini Hariç Tut
+# Build Klasörlerini Hariç Tut
 bin/
 obj/
 
-# Rider ve VS Code İçin Ekstra Klasörler
+# VS Code ve Rider için gereksiz dosyalar
 .vs/
 .idea/
-*.user
 *.suo
+*.user
 *.vscode/
