@@ -28,3 +28,4 @@ D:\Projects\Hirovo\HirovoBackend\Common\Definitions\Common.Definitions.Domain\ob
 D:\Projects\Hirovo\HirovoBackend\Common\Definitions\Common.Definitions.Domain\obj\Debug\net8.0\refint\Common.Definitions.Domain.dll
 D:\Projects\Hirovo\HirovoBackend\Common\Definitions\Common.Definitions.Domain\obj\Debug\net8.0\Common.Definitions.Domain.pdb
 D:\Projects\Hirovo\HirovoBackend\Common\Definitions\Common.Definitions.Domain\obj\Debug\net8.0\ref\Common.Definitions.Domain.dll
+D:\Projects\Hirovo\HirovoBackend\Common\Definitions\Common.Definitions.Domain\obj\Debug\net8.0\Common.Definitions.Domain.sourcelink.json

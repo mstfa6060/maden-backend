@@ -40,3 +40,4 @@ D:\Projects\Hirovo\HirovoBackend\Common\Definitions\Common.Definitions.Infrastru
 D:\Projects\Hirovo\HirovoBackend\Common\Definitions\Common.Definitions.Infrastructure\obj\Debug\net8.0\refint\Common.Definitions.Infrastructure.dll
 D:\Projects\Hirovo\HirovoBackend\Common\Definitions\Common.Definitions.Infrastructure\obj\Debug\net8.0\Common.Definitions.Infrastructure.pdb
 D:\Projects\Hirovo\HirovoBackend\Common\Definitions\Common.Definitions.Infrastructure\obj\Debug\net8.0\ref\Common.Definitions.Infrastructure.dll
+D:\Projects\Hirovo\HirovoBackend\Common\Definitions\Common.Definitions.Infrastructure\obj\Debug\net8.0\Common.Definitions.Infrastructure.sourcelink.json

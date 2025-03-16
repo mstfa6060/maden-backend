@@ -20,3 +20,4 @@ D:\Projects\Hirovo\HirovoBackend\Common\Services\Common.Services.Environment\obj
 D:\Projects\Hirovo\HirovoBackend\Common\Services\Common.Services.Environment\obj\Debug\net8.0\refint\Common.Services.Environment.dll
 D:\Projects\Hirovo\HirovoBackend\Common\Services\Common.Services.Environment\obj\Debug\net8.0\Common.Services.Environment.pdb
 D:\Projects\Hirovo\HirovoBackend\Common\Services\Common.Services.Environment\obj\Debug\net8.0\ref\Common.Services.Environment.dll
+D:\Projects\Hirovo\HirovoBackend\Common\Services\Common.Services.Environment\obj\Debug\net8.0\Common.Services.Environment.sourcelink.json

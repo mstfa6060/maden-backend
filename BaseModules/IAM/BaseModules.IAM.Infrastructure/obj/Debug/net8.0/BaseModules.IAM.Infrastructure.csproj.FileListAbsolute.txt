@@ -44,3 +44,4 @@ D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Infrastructure\
 D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Infrastructure\obj\Debug\net8.0\refint\BaseModules.IAM.Infrastructure.dll
 D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Infrastructure\obj\Debug\net8.0\BaseModules.IAM.Infrastructure.pdb
 D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Infrastructure\obj\Debug\net8.0\ref\BaseModules.IAM.Infrastructure.dll
+D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Infrastructure\obj\Debug\net8.0\BaseModules.IAM.Infrastructure.sourcelink.json

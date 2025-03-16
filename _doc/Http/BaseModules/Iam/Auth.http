@@ -17,3 +17,40 @@ Content-Type: application/json
   "id": "d290f1ee-6c54-4b01-90e6-d701748f0851",
   "name": "Admin"
 }
+
+
+
+### Update
+POST {{Url}}/Roles/Update
+Authorization: Bearer {{Jwt}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": "A1D5B3E4-8E5A-4B3C-9EF5-D3E5A3B7C1F8",
+  "name": "Admin"
+}
+
+
+
+### Delete
+POST {{Url}}/Roles/Delete
+Authorization: Bearer {{Jwt}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": "A1D5B3E4-8E5A-4B3C-9EF5-D3E5A3B7C1F8",
+  "isDeleted": false
+}
+
+
+
+### Delete
+POST {{Url}}/Roles/All
+Authorization: Bearer {{Jwt}}
+Accept: application/json
+Content-Type: application/json
+
+{ 
+}

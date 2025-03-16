@@ -148,6 +148,8 @@ public class DomainErrors
     public class RoleErrors
     {
         public static string NameValid { get; set; } = "";
+        public static string IdValid { get; set; } = "";
+        public static string IncludeDeletedValid { get; set; } = "";
 
     }
 

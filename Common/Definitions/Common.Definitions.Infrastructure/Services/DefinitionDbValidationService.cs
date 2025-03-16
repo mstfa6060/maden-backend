@@ -26,6 +26,15 @@ public class DefinitionDbValidationService
             throw new ArfBlocksValidationException(ErrorCodeGenerator.GetErrorCode(() => DomainErrors.RoleErrors.NameValid));
     }
 
+    public async Task ValidateRoleExist(Guid roleId)
+    {
+        var roleExist = await _dbContext.AppRoles.AnyAsync(d => d.Id == roleId);
+
+        if (!roleExist)
+            throw new ArfBlocksValidationException(ErrorCodeGenerator.GetErrorCode(() => DomainErrors.RoleErrors.IdValid));
+    }
+
+
     public async Task ValidateUserByUserNameExist(string userName)
     {
         // Get

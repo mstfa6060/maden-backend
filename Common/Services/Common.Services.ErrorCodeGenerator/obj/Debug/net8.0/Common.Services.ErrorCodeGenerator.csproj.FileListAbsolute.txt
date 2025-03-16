@@ -20,3 +20,4 @@ D:\Projects\Hirovo\HirovoBackend\Common\Services\Common.Services.ErrorCodeGenera
 D:\Projects\Hirovo\HirovoBackend\Common\Services\Common.Services.ErrorCodeGenerator\obj\Debug\net8.0\refint\Common.Services.ErrorCodeGenerator.dll
 D:\Projects\Hirovo\HirovoBackend\Common\Services\Common.Services.ErrorCodeGenerator\obj\Debug\net8.0\Common.Services.ErrorCodeGenerator.pdb
 D:\Projects\Hirovo\HirovoBackend\Common\Services\Common.Services.ErrorCodeGenerator\obj\Debug\net8.0\ref\Common.Services.ErrorCodeGenerator.dll
+D:\Projects\Hirovo\HirovoBackend\Common\Services\Common.Services.ErrorCodeGenerator\obj\Debug\net8.0\Common.Services.ErrorCodeGenerator.sourcelink.json
