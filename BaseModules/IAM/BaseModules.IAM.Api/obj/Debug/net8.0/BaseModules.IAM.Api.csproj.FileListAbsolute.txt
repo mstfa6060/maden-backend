@@ -200,3 +200,4 @@ D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Api\obj\Debug\n
 D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Api\obj\Debug\net8.0\BaseModules.IAM.Api.pdb
 D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Api\obj\Debug\net8.0\BaseModules.IAM.Api.genruntimeconfig.cache
 D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Api\obj\Debug\net8.0\ref\BaseModules.IAM.Api.dll
+D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Api\obj\Debug\net8.0\BaseModules.IAM.Api.sourcelink.json
