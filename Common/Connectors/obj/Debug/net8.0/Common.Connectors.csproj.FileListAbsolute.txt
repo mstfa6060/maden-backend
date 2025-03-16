@@ -32,3 +32,4 @@ D:\Projects\Hirovo\HirovoBackend\Common\Connectors\obj\Debug\net8.0\Common.Conne
 D:\Projects\Hirovo\HirovoBackend\Common\Connectors\obj\Debug\net8.0\refint\Common.Connectors.dll
 D:\Projects\Hirovo\HirovoBackend\Common\Connectors\obj\Debug\net8.0\Common.Connectors.pdb
 D:\Projects\Hirovo\HirovoBackend\Common\Connectors\obj\Debug\net8.0\ref\Common.Connectors.dll
+D:\Projects\Hirovo\HirovoBackend\Common\Connectors\obj\Debug\net8.0\Common.Connectors.sourcelink.json

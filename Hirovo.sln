@@ -61,6 +61,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Services.ErrorCodeGe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Services.Environment", "Common\Services\Common.Services.Environment\Common.Services.Environment.csproj", "{7545C906-A657-47C0-816F-CF2A52C31DB8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Services.Auth", "Common\Services\Common.Services.Auth\Common.Services.Auth.csproj", "{8F9A2A67-44E4-474E-9CFB-E1EA0E366253}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -263,6 +265,18 @@ Global
 		{7545C906-A657-47C0-816F-CF2A52C31DB8}.Release|x64.Build.0 = Release|Any CPU
 		{7545C906-A657-47C0-816F-CF2A52C31DB8}.Release|x86.ActiveCfg = Release|Any CPU
 		{7545C906-A657-47C0-816F-CF2A52C31DB8}.Release|x86.Build.0 = Release|Any CPU
+		{8F9A2A67-44E4-474E-9CFB-E1EA0E366253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F9A2A67-44E4-474E-9CFB-E1EA0E366253}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F9A2A67-44E4-474E-9CFB-E1EA0E366253}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8F9A2A67-44E4-474E-9CFB-E1EA0E366253}.Debug|x64.Build.0 = Debug|Any CPU
+		{8F9A2A67-44E4-474E-9CFB-E1EA0E366253}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8F9A2A67-44E4-474E-9CFB-E1EA0E366253}.Debug|x86.Build.0 = Debug|Any CPU
+		{8F9A2A67-44E4-474E-9CFB-E1EA0E366253}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F9A2A67-44E4-474E-9CFB-E1EA0E366253}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F9A2A67-44E4-474E-9CFB-E1EA0E366253}.Release|x64.ActiveCfg = Release|Any CPU
+		{8F9A2A67-44E4-474E-9CFB-E1EA0E366253}.Release|x64.Build.0 = Release|Any CPU
+		{8F9A2A67-44E4-474E-9CFB-E1EA0E366253}.Release|x86.ActiveCfg = Release|Any CPU
+		{8F9A2A67-44E4-474E-9CFB-E1EA0E366253}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -293,5 +307,6 @@ Global
 		{CFC2D452-56ED-4709-A384-7DACD4F70531} = {C2C694A3-B3D2-01AD-BC90-93217C79098C}
 		{92546B8C-40F0-4C4B-B98D-10AA6CEAB5FF} = {88443A57-9919-213F-21FA-7714FFA1EEFC}
 		{7545C906-A657-47C0-816F-CF2A52C31DB8} = {88443A57-9919-213F-21FA-7714FFA1EEFC}
+		{8F9A2A67-44E4-474E-9CFB-E1EA0E366253} = {88443A57-9919-213F-21FA-7714FFA1EEFC}
 	EndGlobalSection
 EndGlobal

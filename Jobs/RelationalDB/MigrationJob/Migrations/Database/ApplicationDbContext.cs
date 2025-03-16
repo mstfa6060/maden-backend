@@ -10,6 +10,8 @@ public class ApplicationDbContext : DbContext, IDefinitionDbContext
     public DbSet<User> AppUsers { get; set; }
     public DbSet<Role> AppRoles { get; set; }
     public DbSet<UserRole> UserRoles { get; set; }
+    public DbSet<Resource> AppResources { get; set; }
+
 
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     { }

@@ -20,3 +20,4 @@ D:\Projects\Hirovo\HirovoBackend\BusinessModules\Job\BusinessModules.Job.Domain\
 D:\Projects\Hirovo\HirovoBackend\BusinessModules\Job\BusinessModules.Job.Domain\obj\Debug\net9.0\refint\BusinessModules.Job.Domain.dll
 D:\Projects\Hirovo\HirovoBackend\BusinessModules\Job\BusinessModules.Job.Domain\obj\Debug\net9.0\BusinessModules.Job.Domain.pdb
 D:\Projects\Hirovo\HirovoBackend\BusinessModules\Job\BusinessModules.Job.Domain\obj\Debug\net9.0\ref\BusinessModules.Job.Domain.dll
+D:\Projects\Hirovo\HirovoBackend\BusinessModules\Job\BusinessModules.Job.Domain\obj\Debug\net9.0\BusinessModules.Job.Domain.sourcelink.json

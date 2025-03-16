@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Services\Common.Services.Auth\Common.Services.Auth.csproj" />
     <ProjectReference Include="..\BaseModules.IAM.Infrastructure\BaseModules.IAM.Infrastructure.csproj" />
     <ProjectReference Include="..\..\..\Common\Definitions\Common.Definitions.Domain\Common.Definitions.Domain.csproj" />
     <ProjectReference Include="..\..\..\Common\Definitions\Common.Definitions.Infrastructure\Common.Definitions.Infrastructure.csproj" />

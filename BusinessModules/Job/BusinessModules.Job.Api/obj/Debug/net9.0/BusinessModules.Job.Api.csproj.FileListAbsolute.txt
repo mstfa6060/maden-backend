@@ -76,3 +76,5 @@ D:\Projects\Hirovo\HirovoBackend\BusinessModules\Job\BusinessModules.Job.Api\obj
 D:\Projects\Hirovo\HirovoBackend\BusinessModules\Job\BusinessModules.Job.Api\obj\Debug\net9.0\BusinessModules.Job.Api.pdb
 D:\Projects\Hirovo\HirovoBackend\BusinessModules\Job\BusinessModules.Job.Api\obj\Debug\net9.0\BusinessModules.Job.Api.genruntimeconfig.cache
 D:\Projects\Hirovo\HirovoBackend\BusinessModules\Job\BusinessModules.Job.Api\obj\Debug\net9.0\ref\BusinessModules.Job.Api.dll
+D:\Projects\Hirovo\HirovoBackend\BusinessModules\Job\BusinessModules.Job.Api\obj\Debug\net9.0\BusinessModules.Job.Api.sourcelink.json
+D:\Projects\Hirovo\HirovoBackend\BusinessModules\Job\BusinessModules.Job.Api\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

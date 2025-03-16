@@ -15,6 +15,7 @@ public class DefinitionDbContext : DbContext, IDefinitionDbContext
     public DbSet<User> AppUsers { get; set; }
     public DbSet<Role> AppRoles { get; set; }
     public DbSet<UserRole> UserRoles { get; set; }
+    public DbSet<Resource> AppResources { get; set; }
 
 
     public DefinitionDbContext(DefinitionDbContextOptions customDbContextOptions) : base(customDbContextOptions.DbContextOptions)

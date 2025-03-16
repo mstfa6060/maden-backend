@@ -450,3 +450,4 @@ D:\Projects\Hirovo\HirovoBackend\Jobs\RelationalDB\MigrationJob\obj\Debug\net8.0
 D:\Projects\Hirovo\HirovoBackend\Jobs\RelationalDB\MigrationJob\obj\Debug\net8.0\Jobs.RelationalDB.MigrationJob.pdb
 D:\Projects\Hirovo\HirovoBackend\Jobs\RelationalDB\MigrationJob\obj\Debug\net8.0\Jobs.RelationalDB.MigrationJob.genruntimeconfig.cache
 D:\Projects\Hirovo\HirovoBackend\Jobs\RelationalDB\MigrationJob\obj\Debug\net8.0\ref\Jobs.RelationalDB.MigrationJob.dll
+D:\Projects\Hirovo\HirovoBackend\Jobs\RelationalDB\MigrationJob\obj\Debug\net8.0\Jobs.RelationalDB.MigrationJob.sourcelink.json

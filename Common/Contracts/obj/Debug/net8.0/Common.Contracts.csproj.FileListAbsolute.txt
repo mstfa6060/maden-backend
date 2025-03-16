@@ -32,3 +32,4 @@ D:\Projects\Hirovo\HirovoBackend\Common\Contracts\obj\Debug\net8.0\Common.Contra
 D:\Projects\Hirovo\HirovoBackend\Common\Contracts\obj\Debug\net8.0\refint\Common.Contracts.dll
 D:\Projects\Hirovo\HirovoBackend\Common\Contracts\obj\Debug\net8.0\Common.Contracts.pdb
 D:\Projects\Hirovo\HirovoBackend\Common\Contracts\obj\Debug\net8.0\ref\Common.Contracts.dll
+D:\Projects\Hirovo\HirovoBackend\Common\Contracts\obj\Debug\net8.0\Common.Contracts.sourcelink.json

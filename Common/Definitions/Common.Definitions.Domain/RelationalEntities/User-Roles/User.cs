@@ -42,10 +42,20 @@ public class User : BaseEntity, ITenantEntity
     public double? LastKnownLatitude { get; set; }
     public double? LastKnownLongitude { get; set; }
     public DateTime? LastLocationUpdate { get; set; }
+
+    public UserSources UserSource { get; set; }
+
 }
 
 public enum UserType
 {
     Worker = 1,     // İşçi (Çalışan)
     Employer = 2    // İşveren (İşçi Arayan)
+}
+
+public enum UserSources
+{
+    ActiveDirectory = 0,
+    JHR = 1,
+    MerkezBirligi = 2,
 }

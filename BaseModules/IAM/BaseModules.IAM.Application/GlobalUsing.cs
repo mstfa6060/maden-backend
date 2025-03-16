@@ -10,7 +10,7 @@ global using Microsoft.EntityFrameworkCore;
 global using static System.Linq.Queryable;
 global using static System.Linq.Enumerable;
 
-// global using MongoDB.Driver;
+//global using MongoDB.Driver;
 global using FluentValidation;
 global using FluentAssertions;
 
@@ -33,26 +33,26 @@ global using Arfware.ArfBlocks.Core.Contexts;
 
 global using Common.Definitions.Domain.Entities;
 global using Common.Definitions.Infrastructure.RelationalDB;
-// global using Common.Services.Auth.CurrentUser;
-// global using Common.Connectors.File;
-// global using Common.Connectors.Mail;
-// global using Common.Connectors.Sms;
-// global using Common.Services.Auth.JsonWebToken;
+global using Common.Services.Auth.CurrentUser;
+//global using Common.Connectors.File;
+//global using Common.Connectors.Mail;
+//global using Common.Connectors.Sms;
+//global using Common.Services.Auth.JsonWebToken;
 global using Common.Services.Environment;
-// global using Common.Services.Auth.Authorization;
-// global using Common.Connectors.File.Models;
-// global using Common.Connectors.Mail.Models;
-// global using Common.Connectors.Sms.Models;
+global using Common.Services.Auth.Authorization;
+//global using Common.Connectors.File.Models;
+//global using Common.Connectors.Mail.Models;
+//global using Common.Connectors.Sms.Models;
 global using Common.Services.ErrorCodeGenerator;
-// global using Common.Definitions.Infrastructure.Services.TestServices;
-// global using Common.Definitions.Domain.Models;
-// global using Common.Contracts.Queue.Models;
-// global using Common.Definitions.Base.Enums;
+//global using Common.Definitions.Infrastructure.Services.TestServices;
+global using Common.Definitions.Domain.Models;
+//global using Common.Contracts.Queue.Models;
+global using Common.Definitions.Base.Enums;
 
-// global using BaseModules.IAM.Domain.Errors;
+//global using BaseModules.IAM.Domain.Errors;
 global using BaseModules.IAM.Infrastructure.RelationalDB;
-// global using BaseModules.IAM.Domain.Entities;
-// global using BaseModules.IAM.Domain.Models;
+//global using BaseModules.IAM.Domain.Entities;
+//global using BaseModules.IAM.Domain.Models;
 global using BaseModules.IAM.Infrastructure.Services;
 
 global using Common.Definitions.Domain.Errors;
