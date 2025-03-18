@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Jobs.RelationalDB.MigrationJob.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250317201523_UsersTableFix")]
-    partial class UsersTableFix
+    [Migration("20250318183418_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -52,6 +52,39 @@ namespace Jobs.RelationalDB.MigrationJob.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Module");
+                });
+
+            modelBuilder.Entity("Common.Definitions.Domain.Entities.RelSystemUserModule", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("ModuleId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("SystemAdminId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ModuleId");
+
+                    b.HasIndex("SystemAdminId");
+
+                    b.ToTable("AppRelSystemUserModules");
                 });
 
             modelBuilder.Entity("Common.Definitions.Domain.Entities.Resource", b =>
@@ -141,20 +174,20 @@ namespace Jobs.RelationalDB.MigrationJob.Migrations
                         new
                         {
                             Id = new Guid("a1d5b3e4-8e5a-4b3c-9ef5-d3e5a3b7c1f8"),
-                            CreatedAt = new DateTime(2025, 3, 17, 20, 15, 22, 505, DateTimeKind.Utc).AddTicks(3984),
+                            CreatedAt = new DateTime(2025, 3, 18, 18, 34, 18, 566, DateTimeKind.Utc).AddTicks(1191),
                             IsDeleted = false,
                             IsSystemRole = true,
                             Name = "Admin",
-                            UpdatedAt = new DateTime(2025, 3, 17, 20, 15, 22, 505, DateTimeKind.Utc).AddTicks(3986)
+                            UpdatedAt = new DateTime(2025, 3, 18, 18, 34, 18, 566, DateTimeKind.Utc).AddTicks(1194)
                         },
                         new
                         {
                             Id = new Guid("b3f8a7d1-4e2c-4a3e-8b5a-d3e7b9c5e2f1"),
-                            CreatedAt = new DateTime(2025, 3, 17, 20, 15, 22, 505, DateTimeKind.Utc).AddTicks(3990),
+                            CreatedAt = new DateTime(2025, 3, 18, 18, 34, 18, 566, DateTimeKind.Utc).AddTicks(1211),
                             IsDeleted = false,
                             IsSystemRole = true,
                             Name = "Employer",
-                            UpdatedAt = new DateTime(2025, 3, 17, 20, 15, 22, 505, DateTimeKind.Utc).AddTicks(3990)
+                            UpdatedAt = new DateTime(2025, 3, 18, 18, 34, 18, 566, DateTimeKind.Utc).AddTicks(1212)
                         });
                 });
 
@@ -186,45 +219,65 @@ namespace Jobs.RelationalDB.MigrationJob.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("RolePermission");
+                    b.ToTable("RolePermissions");
 
                     b.HasData(
                         new
                         {
-                            Id = new Guid("ceffa3b6-cd88-4bf1-8073-f40cb82faaf4"),
-                            CreatedAt = new DateTime(2025, 3, 17, 20, 15, 22, 505, DateTimeKind.Utc).AddTicks(4097),
+                            Id = new Guid("8c9beb6e-8580-429d-a326-aede5a63f7bb"),
+                            CreatedAt = new DateTime(2025, 3, 18, 18, 34, 18, 566, DateTimeKind.Utc).AddTicks(1381),
                             IsDeleted = false,
                             Permission = "ManageUsers",
                             RoleId = new Guid("a1d5b3e4-8e5a-4b3c-9ef5-d3e5a3b7c1f8"),
-                            UpdatedAt = new DateTime(2025, 3, 17, 20, 15, 22, 505, DateTimeKind.Utc).AddTicks(4097)
+                            UpdatedAt = new DateTime(2025, 3, 18, 18, 34, 18, 566, DateTimeKind.Utc).AddTicks(1381)
                         },
                         new
                         {
-                            Id = new Guid("eca94a68-6f52-42f7-9e11-8c22b4d1328e"),
-                            CreatedAt = new DateTime(2025, 3, 17, 20, 15, 22, 505, DateTimeKind.Utc).AddTicks(4109),
+                            Id = new Guid("0303bda1-176c-40d2-bee5-bc30bd244efa"),
+                            CreatedAt = new DateTime(2025, 3, 18, 18, 34, 18, 566, DateTimeKind.Utc).AddTicks(1385),
                             IsDeleted = false,
                             Permission = "ManageRoles",
                             RoleId = new Guid("a1d5b3e4-8e5a-4b3c-9ef5-d3e5a3b7c1f8"),
-                            UpdatedAt = new DateTime(2025, 3, 17, 20, 15, 22, 505, DateTimeKind.Utc).AddTicks(4110)
+                            UpdatedAt = new DateTime(2025, 3, 18, 18, 34, 18, 566, DateTimeKind.Utc).AddTicks(1385)
                         },
                         new
                         {
-                            Id = new Guid("6b926475-9ff3-49d1-be4c-dbfb07b14781"),
-                            CreatedAt = new DateTime(2025, 3, 17, 20, 15, 22, 505, DateTimeKind.Utc).AddTicks(4112),
+                            Id = new Guid("b320166d-d769-4902-ad2d-66f00d53bff0"),
+                            CreatedAt = new DateTime(2025, 3, 18, 18, 34, 18, 566, DateTimeKind.Utc).AddTicks(1421),
                             IsDeleted = false,
                             Permission = "PostJobs",
                             RoleId = new Guid("b3f8a7d1-4e2c-4a3e-8b5a-d3e7b9c5e2f1"),
-                            UpdatedAt = new DateTime(2025, 3, 17, 20, 15, 22, 505, DateTimeKind.Utc).AddTicks(4112)
+                            UpdatedAt = new DateTime(2025, 3, 18, 18, 34, 18, 566, DateTimeKind.Utc).AddTicks(1421)
                         },
                         new
                         {
-                            Id = new Guid("0a07b0c5-6920-4fe6-8c86-d030abecf8e5"),
-                            CreatedAt = new DateTime(2025, 3, 17, 20, 15, 22, 505, DateTimeKind.Utc).AddTicks(4115),
+                            Id = new Guid("4b2a3c91-aeb7-4665-8154-8bbe4227792d"),
+                            CreatedAt = new DateTime(2025, 3, 18, 18, 34, 18, 566, DateTimeKind.Utc).AddTicks(1429),
                             IsDeleted = false,
                             Permission = "ViewWorkers",
                             RoleId = new Guid("b3f8a7d1-4e2c-4a3e-8b5a-d3e7b9c5e2f1"),
-                            UpdatedAt = new DateTime(2025, 3, 17, 20, 15, 22, 505, DateTimeKind.Utc).AddTicks(4115)
+                            UpdatedAt = new DateTime(2025, 3, 18, 18, 34, 18, 566, DateTimeKind.Utc).AddTicks(1429)
                         });
+                });
+
+            modelBuilder.Entity("Common.Definitions.Domain.Entities.SystemAdmin", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsAllModulePermitted")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AppSystemAdmins");
                 });
 
             modelBuilder.Entity("Common.Definitions.Domain.Entities.User", b =>
@@ -334,6 +387,9 @@ namespace Jobs.RelationalDB.MigrationJob.Migrations
                     b.Property<Guid>("RoleId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
@@ -347,6 +403,25 @@ namespace Jobs.RelationalDB.MigrationJob.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("UserRoles");
+                });
+
+            modelBuilder.Entity("Common.Definitions.Domain.Entities.RelSystemUserModule", b =>
+                {
+                    b.HasOne("Common.Definitions.Domain.Entities.Module", "Module")
+                        .WithMany()
+                        .HasForeignKey("ModuleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Common.Definitions.Domain.Entities.SystemAdmin", "SystemAdmin")
+                        .WithMany("RelSystemUserModules")
+                        .HasForeignKey("SystemAdminId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Module");
+
+                    b.Navigation("SystemAdmin");
                 });
 
             modelBuilder.Entity("Common.Definitions.Domain.Entities.Resource", b =>
@@ -398,6 +473,11 @@ namespace Jobs.RelationalDB.MigrationJob.Migrations
             modelBuilder.Entity("Common.Definitions.Domain.Entities.Role", b =>
                 {
                     b.Navigation("RolePermissions");
+                });
+
+            modelBuilder.Entity("Common.Definitions.Domain.Entities.SystemAdmin", b =>
+                {
+                    b.Navigation("RelSystemUserModules");
                 });
 #pragma warning restore 612, 618
         }

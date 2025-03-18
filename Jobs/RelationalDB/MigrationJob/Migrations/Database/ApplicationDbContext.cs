@@ -11,7 +11,9 @@ public class ApplicationDbContext : DbContext, IDefinitionDbContext
     public DbSet<Role> AppRoles { get; set; }
     public DbSet<UserRole> UserRoles { get; set; }
     public DbSet<Resource> AppResources { get; set; }
-
+    public DbSet<SystemAdmin> AppSystemAdmins { get; set; }
+    public DbSet<RelSystemUserModule> AppRelSystemUserModules { get; set; }
+    public DbSet<RolePermission> RolePermissions { get; set; }
 
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     { }
