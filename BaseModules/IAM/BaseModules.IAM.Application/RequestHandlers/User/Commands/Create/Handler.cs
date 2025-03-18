@@ -1,15 +1,16 @@
-
 namespace BaseModules.IAM.Application.RequestHandlers.Users.Commands.Create;
 
 public class Handler : IRequestHandler
 {
 	private readonly DataAccess _dataAccessLayer;
 	private readonly ArfBlocksCommunicator _communicator;
+	private readonly EnvironmentService _environmentService;
 
-	public Handler(ArfBlocksDependencyProvider dependencyProvider, object dataAccess)
+	public Handler(ArfBlocksDependencyProvider dependencyProvider, DataAccess dataAccess) // ✅ `object` yerine `DataAccess` kullanıldı
 	{
-		_dataAccessLayer = (DataAccess)dataAccess;
+		_dataAccessLayer = dataAccess;
 		_communicator = dependencyProvider.GetInstance<ArfBlocksCommunicator>();
+		_environmentService = dependencyProvider.GetInstance<EnvironmentService>();
 	}
 
 	public async Task<ArfBlocksRequestResult> Handle(IRequestModel payload, EndpointContext context, CancellationToken cancellationToken)
@@ -17,16 +18,15 @@ public class Handler : IRequestHandler
 		var mapper = new Mapper();
 		var requestPayload = (RequestModel)payload;
 
-		// Kullanıcının zaten var olup olmadığını kontrol et
-		var existingUser = await _dataAccessLayer.GetUserByEmail(requestPayload.Email);
-		if (existingUser != null)
-		{
-			throw new ArfBlocksValidationException("Bu e-posta adresi zaten kullanımda.");
-		}
+		string hashedPassword = null;
+		string salt = null;
 
-		// Şifre hashlemesi yap
-		var salt = SecurityHelper.GenerateSalt();
-		var hashedPassword = SecurityHelper.HashPassword(requestPayload.Password, salt);
+		if (requestPayload.UserSource == UserSources.Manual)
+		{
+			// Şifre hashlemesi yap
+			salt = SecurityHelper.GenerateSalt();
+			hashedPassword = SecurityHelper.HashPassword(requestPayload.Password, salt);
+		}
 
 		// Kullanıcı nesnesini oluştur
 		var user = mapper.MapToNewEntity(requestPayload, hashedPassword, salt);

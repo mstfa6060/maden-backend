@@ -16,7 +16,9 @@ public class DefinitionDbContext : DbContext, IDefinitionDbContext
     public DbSet<Role> AppRoles { get; set; }
     public DbSet<UserRole> UserRoles { get; set; }
     public DbSet<Resource> AppResources { get; set; }
-
+    public DbSet<SystemAdmin> AppSystemAdmins { get; set; }
+    public DbSet<RelSystemUserModule> AppRelSystemUserModules { get; set; }
+    public DbSet<RolePermission> RolePermissions { get; set; }
 
     public DefinitionDbContext(DefinitionDbContextOptions customDbContextOptions) : base(customDbContextOptions.DbContextOptions)
     {
@@ -31,6 +33,17 @@ public class DefinitionDbContext : DbContext, IDefinitionDbContext
     {
         CommonModelBuilder.Build(modelBuilder);
         base.OnModelCreating(modelBuilder);
+        // RolePermission yapılandırması
+        // modelBuilder.Entity<RolePermission>(entity =>
+        // {
+        //     entity.ToTable("RolePermission");
+        //     entity.HasKey(e => e.Id);
+        //     entity.Property(e => e.Permission).IsRequired();
+        //     entity.HasOne(e => e.Role)
+        //           .WithMany(r => r.RolePermissions)
+        //           .HasForeignKey(e => e.RoleId);
+        // });
+
     }
 
 

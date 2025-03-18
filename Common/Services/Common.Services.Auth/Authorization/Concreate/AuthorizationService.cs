@@ -136,10 +136,21 @@ public partial class AuthorizationService : IAuthorizationService
         throw new NotImplementedException();
     }
 
-    public Task<bool> IsSystemAdmin(ModuleTypes moduleType)
+    public async Task<bool> IsSystemAdmin(ModuleTypes moduleType)
     {
-        throw new NotImplementedException();
+        var currentUserId = _currentUserService.GetCurrentUserId();
+
+        return await _dbContext.AppSystemAdmins
+            .Include(a => a.RelSystemUserModules)
+            .ThenInclude(s => s.Module)
+            .AnyAsync(s => s.UserId == currentUserId
+                        && s.IsActive
+                        && (
+                            s.IsAllModulePermitted
+                            || s.RelSystemUserModules.Any(r => r.Module.ModuleType == moduleType)
+                        ));
     }
+
 
 
     private async Task<bool> IsTenantOperationPermitted(Resource resource, Guid entityId, Type entityType)
@@ -232,4 +243,21 @@ public partial class AuthorizationService : IAuthorizationService
 
         return false;
     }
+
+    public async Task<bool> HasNamespacePermission(Guid userId, string namespacePath)
+    {
+        var roleId = await _dbContext.UserRoles
+            .Where(ur => ur.UserId == userId)
+            .Select(ur => ur.RoleId)
+            .FirstOrDefaultAsync();
+
+        if (roleId == null)
+            return false;
+
+        var hasPermission = await _dbContext.RolePermissions
+            .AnyAsync(rp => rp.RoleId == roleId && rp.Permission == namespacePath);
+
+        return hasPermission;
+    }
+
 }

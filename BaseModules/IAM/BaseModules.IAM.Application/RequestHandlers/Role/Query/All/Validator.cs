@@ -30,7 +30,7 @@ public class RequestModel_Validator : AbstractValidator<RequestModel>
 {
 	public RequestModel_Validator()
 	{
-		RuleFor(x => x.Sorting).NotNull();
-		RuleFor(x => x.PageRequest).NotNull();
+		// RuleFor(x => x.Sorting).NotNull();
+		// RuleFor(x => x.PageRequest).NotNull();
 	}
 }

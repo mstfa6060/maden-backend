@@ -27,4 +27,6 @@ public interface IAuthorizationService
     public Task<bool> IsFakeRegisteredUser();
     public Task<bool> IsUserBanned();
     public Task<bool> IsSystemAdmin(ModuleTypes moduleType);
+    Task<bool> HasNamespacePermission(Guid userId, string namespacePath);
+
 }

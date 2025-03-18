@@ -15,7 +15,7 @@ Content-Type: application/json
 
 {
   "id": "d290f1ee-6c54-4b01-90e6-d701748f0851",
-  "name": "Admin"
+  "name": "Admin4"
 }
 
 
@@ -52,5 +52,65 @@ Authorization: Bearer {{Jwt}}
 Accept: application/json
 Content-Type: application/json
 
-{ 
+{
+    "sorting": null,
+    "filters": [],
+    "pageRequest": {
+        "perPageCount": 20,
+        "currentPage": 1,
+        "listAll": false
+    }
+}
+
+
+### Manuel Kayıt
+POST {{Url}}/Users/Create
+Authorization: Bearer {{Jwt}}
+Accept: application/json
+Content-Type: application/json
+
+{
+    "userName": "johndoe",
+    "firstName": "John",
+    "surname": "Doe",
+    "email": "johndoe@example.com",
+    "password": "SecureP@ss123",
+    "userType": 1,
+    "companyId": "550e8400-e29b-41d4-a716-446655440000",
+    "userSource": 0
+}
+
+
+### Google Kayıt (OAuth)
+POST {{Url}}/Users/Create
+Accept: application/json
+Content-Type: application/json
+
+{
+    "userName": "johndoe_google",
+    "firstName": "John",
+    "surname": "Doe",
+    "email": "johndoe@gmail.com",
+    "providerId": "11223344556677889900",
+    "userType": 1,
+    "companyId": "550e8400-e29b-41d4-a716-446655440000",
+    "userSource": 1
+}
+
+
+
+### Apple Kayıt (OAuth)cd
+POST {{Url}}/Users/Create
+Accept: application/json
+Content-Type: application/json
+
+{
+    "userName": "johndoe_apple",
+    "firstName": "John",
+    "surname": "Doe",
+    "email": "johndoe@icloud.com",
+    "providerId": "A1B2C3D4E5F6G7H8I9J0",
+    "userType": 1,
+    "companyId": "550e8400-e29b-41d4-a716-446655440000",
+    "userSource": 2
 }

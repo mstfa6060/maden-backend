@@ -5,7 +5,7 @@ using Common.Definitions.Base.Entity;
 
 namespace Common.Definitions.Domain.Entities;
 
-public class UserRole : BaseEntity
+public class UserRole : BaseEntity, ITenantEntity
 {
     public Guid UserId { get; set; }
     public Guid RoleId { get; set; }
@@ -15,6 +15,17 @@ public class UserRole : BaseEntity
 
     [ForeignKey("RoleId")]
     public Role Role { get; set; }
+
+    // ITenantEntity için zorunlu property
+    public Guid TenantId { get; set; }
+
+    public Guid GetTenantId() => TenantId;
+    public string GetTenantPropertyName() => nameof(TenantId);
+
+    public object GetTenantEntity()
+    {
+        return null;
+    }
 }
 
 
@@ -25,5 +36,5 @@ public class Role : BaseEntity
 
     public bool IsSystemRole { get; set; } = false; // True: Sistem tarafından tanımlı rol
 
-    public ICollection<RolePermission> RolePermissions { get; set; } = new List<RolePermission>();
+    public List<RolePermission> RolePermissions { get; set; } = new List<RolePermission>();
 }

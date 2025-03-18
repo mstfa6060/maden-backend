@@ -16,9 +16,14 @@ public class Mapper
 			IsActive = true,
 			EmailConfirmed = false,
 			UserType = payload.UserType,
-			CompanyId = payload.CompanyId
+			CompanyId = payload.CompanyId,
+			ProviderKey = payload.ProviderId, // Google veya Apple ID'si
+			AuthProvider = payload.UserSource == UserSources.Google ? "Google" :
+						   payload.UserSource == UserSources.Apple ? "Apple" : "Manual",
+			UserSource = payload.UserSource
 		};
 	}
+
 
 	public ResponseModel MapToResponse(User user)
 	{

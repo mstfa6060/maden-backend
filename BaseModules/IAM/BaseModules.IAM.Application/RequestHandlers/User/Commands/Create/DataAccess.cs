@@ -1,6 +1,7 @@
 // DataAccess.cs
 namespace BaseModules.IAM.Application.RequestHandlers.Users.Commands.Create;
-public class DataAccess
+
+public class DataAccess : IDataAccess
 {
 	private readonly IamDbContext _dbContext;
 

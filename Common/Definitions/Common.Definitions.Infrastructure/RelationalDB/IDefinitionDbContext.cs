@@ -14,6 +14,9 @@ public interface IDefinitionDbContext
     DbSet<Role> AppRoles { get; set; }
     DbSet<UserRole> UserRoles { get; set; }
     DbSet<Resource> AppResources { get; set; }
+    DbSet<SystemAdmin> AppSystemAdmins { get; set; }
+    DbSet<RelSystemUserModule> AppRelSystemUserModules { get; set; }
+    DbSet<RolePermission> RolePermissions { get; set; }
 
 
 }

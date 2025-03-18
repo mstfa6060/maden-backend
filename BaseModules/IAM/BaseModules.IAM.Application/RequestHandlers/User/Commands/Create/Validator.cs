@@ -34,12 +34,15 @@ public class Validator : IRequestValidator
 	}
 
 }
+
+
 public class RequestModel_Validator : AbstractValidator<RequestModel>
 {
 	public RequestModel_Validator()
 	{
 		RuleFor(x => x.UserName)
-			.NotEmpty().WithMessage(ErrorCodeGenerator.GetErrorCode(() => DomainErrors.UserErrors.UserNameValid));
+			.NotEmpty().WithMessage(ErrorCodeGenerator.GetErrorCode(() => DomainErrors.UserErrors.UserNameValid))
+			.When(x => x.UserSource == UserSources.Manual); // Sadece manuel kayıtlar için zorunlu
 
 		RuleFor(x => x.Email)
 			.NotEmpty().WithMessage(ErrorCodeGenerator.GetErrorCode(() => DomainErrors.UserErrors.EmailValid))
@@ -50,6 +53,7 @@ public class RequestModel_Validator : AbstractValidator<RequestModel>
 			.MinimumLength(6).WithMessage(ErrorCodeGenerator.GetErrorCode(() => DomainErrors.UserErrors.PasswordTooShort))
 			.Matches(@"[A-Z]").WithMessage(ErrorCodeGenerator.GetErrorCode(() => DomainErrors.UserErrors.PasswordMustContainUppercase))
 			.Matches(@"[a-z]").WithMessage(ErrorCodeGenerator.GetErrorCode(() => DomainErrors.UserErrors.PasswordMustContainLowercase))
-			.Matches(@"\d").WithMessage(ErrorCodeGenerator.GetErrorCode(() => DomainErrors.UserErrors.PasswordMustContainDigit));
+			.Matches(@"\d").WithMessage(ErrorCodeGenerator.GetErrorCode(() => DomainErrors.UserErrors.PasswordMustContainDigit))
+			.When(x => x.UserSource == UserSources.Manual); // Sadece manuel kayıtlar için
 	}
 }

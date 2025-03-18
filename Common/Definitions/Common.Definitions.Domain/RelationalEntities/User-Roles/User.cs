@@ -55,7 +55,7 @@ public enum UserType
 
 public enum UserSources
 {
-    ActiveDirectory = 0,
-    JHR = 1,
-    MerkezBirligi = 2,
+    Manual = 0,   // Kullanıcı adı & şifre ile kayıt olanlar
+    Google = 1,   // Google ile giriş yapanlar
+    Apple = 2     // Apple ile giriş yapanlar
 }
