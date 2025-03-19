@@ -16,5 +16,5 @@ COPY --from=build /app/publish .
 ENV ConnectionStrings__DefaultConnection="Server=sqlserver,1433;Database=HirovoDB;User=sa;Password=FRAudnxd4rzcVPt;"
 
 # API'yi başlat
-ENTRYPOINT ["dotnet", "Hirovo.ApiWithMiddleware.dll"]
+ENTRYPOINT ["dotnet", "BaseModules.IAM.Api.dll"]
 
