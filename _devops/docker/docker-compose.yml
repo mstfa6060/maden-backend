@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  hirovo-api:
+    build:
+      context: ../../  # Projenin ana dizinine git
+      dockerfile: _devops/docker/Dockerfile  # Dockerfile’ın yeni yolu
+    container_name: hirovo-api-container
+    depends_on:
+      - sqlserver
+    ports:
+      - "8080:8080"
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=hirovo_db;User=sa;Password=FRAudnxd4rzcVPt;TrustServerCertificate=True;
+    networks:
+      - hirovo-network
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sql-server
+    environment:
+      SA_PASSWORD: "FRAudnxd4rzcVPt"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    networks:
+      - hirovo-network
+
+networks:
+  hirovo-network:
+    driver: bridge

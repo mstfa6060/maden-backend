@@ -1,0 +1,117 @@
+
+#  @Url= http://localhost:5000
+ @Url=http://3.88.252.189:5000
+# @Url= https://api-test.toprak.tkholding.com.tr/koopposbackoffice
+
+//merve.dursun
+  @Jwt = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIyNjA4MDZlMS1lZjJiLTQ2MDMtYmViOS0wOGRiZDYyMjYzMTQiLCJnaXZlbl9uYW1lIjoibWVydmUuZHVyc3VuIiwidW5pcXVlX25hbWUiOiJNZXJ2ZSBEVVJTVU4iLCJ0ZW5hbnRpZCI6IjhhNzc5ODE0LTY2MGEtNGFmNS1iNzc1LTU5OTFkZjRhYjdiZiIsImRlcGFydG1lbnRJZCI6IjUwYTIzMmNhLWVlOWEtNDM2MC0yMGMwLTA4ZGJmYTUwNzc5OCIsInBsYXRmb3JtIjoiMCIsIm5iZiI6MTcxOTgyMjE3NCwiZXhwIjoxNzIwMDgxMzc0LCJpYXQiOjE3MTk4MjIxNzQsImF1ZCI6ImlhbS50b3ByYWsudGtob2xkaW5nLmNvbS50ciJ9.GhfyNoNSBNCDSxHErN8tAtla1RKdlMyFxJDsYbTlB84
+
+
+
+### Create
+POST {{Url}}/Roles/Create
+Authorization: Bearer {{Jwt}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": "d290f1ee-6c54-4b01-90e6-d701748f0851",
+  "name": "Admin4"
+}
+
+
+
+### Update
+POST {{Url}}/Roles/Update
+Authorization: Bearer {{Jwt}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": "A1D5B3E4-8E5A-4B3C-9EF5-D3E5A3B7C1F8",
+  "name": "Admin"
+}
+
+
+
+### Delete
+POST {{Url}}/Roles/Delete
+Authorization: Bearer {{Jwt}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": "A1D5B3E4-8E5A-4B3C-9EF5-D3E5A3B7C1F8",
+  "isDeleted": false
+}
+
+
+
+### Delete
+POST {{Url}}/Roles/All
+Authorization: Bearer {{Jwt}}
+Accept: application/json
+Content-Type: application/json
+
+{
+    "sorting": null,
+    "filters": [],
+    "pageRequest": {
+        "perPageCount": 20,
+        "currentPage": 1,
+        "listAll": false
+    }
+}
+
+
+### Manuel Kayıt
+POST {{Url}}/Users/Create
+Authorization: Bearer {{Jwt}}
+Accept: application/json
+Content-Type: application/json
+
+{
+    "userName": "johndoe",
+    "firstName": "John",
+    "surname": "Doe",
+    "email": "johndoe@example.com",
+    "password": "SecureP@ss123",
+    "userType": 1,
+    "companyId": "550e8400-e29b-41d4-a716-446655440000",
+    "userSource": 0
+}
+
+
+### Google Kayıt (OAuth)
+POST {{Url}}/Users/Create
+Accept: application/json
+Content-Type: application/json
+
+{
+    "userName": "johndoe_google",
+    "firstName": "John",
+    "surname": "Doe",
+    "email": "johndowe@gmail.com",
+    "providerId": "11223344556677889900",
+    "userType": 1,
+    "companyId": "550e8400-e29b-41d4-a716-446655440000",
+    "userSource": 1
+}
+
+
+
+### Apple Kayıt (OAuth)cd
+POST {{Url}}/Users/Create
+Accept: application/json
+Content-Type: application/json
+
+{
+    "userName": "johndoe_apple",
+    "firstName": "John",
+    "surname": "Doe",
+    "email": "johndoe@icloud.com",
+    "providerId": "A1B2C3D4E5F6G7H8I9J0",
+    "userType": 1,
+    "companyId": "550e8400-e29b-41d4-a716-446655440000",
+    "userSource": 2
+}

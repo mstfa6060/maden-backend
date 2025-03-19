@@ -1,0 +1,10 @@
+# Build Klasörlerini Hariç Tut
+bin/
+obj/
+
+# VS Code ve Rider için gereksiz dosyalar
+.vs/
+.idea/
+*.suo
+*.user
+*.vscode/
