@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Jobs.RelationalDB.MigrationJob")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b3df599b9d13e730f8119bb340cf6df2f01329bf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f7410197f9d300e9dc60ee2b52c9faa58a6d3801")]
 [assembly: System.Reflection.AssemblyProductAttribute("Jobs.RelationalDB.MigrationJob")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Jobs.RelationalDB.MigrationJob")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
