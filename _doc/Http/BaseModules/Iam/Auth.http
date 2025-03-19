@@ -1,5 +1,6 @@
 
- @Url= http://localhost:5000
+#  @Url= http://localhost:5000
+ @Url=http://3.88.252.189:5000
 # @Url= https://api-test.toprak.tkholding.com.tr/koopposbackoffice
 
 //merve.dursun
@@ -90,7 +91,7 @@ Content-Type: application/json
     "userName": "johndoe_google",
     "firstName": "John",
     "surname": "Doe",
-    "email": "johndoe@gmail.com",
+    "email": "johndowe@gmail.com",
     "providerId": "11223344556677889900",
     "userType": 1,
     "companyId": "550e8400-e29b-41d4-a716-446655440000",
