@@ -1,0 +1,12 @@
+D:\Projects\Hirovo\HirovoBackend\Common\Services\Common.Services.Environment\bin\Release\net8.0\Common.Services.Environment.deps.json
+D:\Projects\Hirovo\HirovoBackend\Common\Services\Common.Services.Environment\bin\Release\net8.0\Common.Services.Environment.dll
+D:\Projects\Hirovo\HirovoBackend\Common\Services\Common.Services.Environment\bin\Release\net8.0\Common.Services.Environment.pdb
+D:\Projects\Hirovo\HirovoBackend\Common\Services\Common.Services.Environment\obj\Release\net8.0\Common.Services.Environment.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Hirovo\HirovoBackend\Common\Services\Common.Services.Environment\obj\Release\net8.0\Common.Services.Environment.AssemblyInfoInputs.cache
+D:\Projects\Hirovo\HirovoBackend\Common\Services\Common.Services.Environment\obj\Release\net8.0\Common.Services.Environment.AssemblyInfo.cs
+D:\Projects\Hirovo\HirovoBackend\Common\Services\Common.Services.Environment\obj\Release\net8.0\Common.Services.Environment.csproj.CoreCompileInputs.cache
+D:\Projects\Hirovo\HirovoBackend\Common\Services\Common.Services.Environment\obj\Release\net8.0\Common.Services.Environment.sourcelink.json
+D:\Projects\Hirovo\HirovoBackend\Common\Services\Common.Services.Environment\obj\Release\net8.0\Common.Services.Environment.dll
+D:\Projects\Hirovo\HirovoBackend\Common\Services\Common.Services.Environment\obj\Release\net8.0\refint\Common.Services.Environment.dll
+D:\Projects\Hirovo\HirovoBackend\Common\Services\Common.Services.Environment\obj\Release\net8.0\Common.Services.Environment.pdb
+D:\Projects\Hirovo\HirovoBackend\Common\Services\Common.Services.Environment\obj\Release\net8.0\ref\Common.Services.Environment.dll

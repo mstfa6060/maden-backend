@@ -1,0 +1,12 @@
+D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Domain\bin\Debug\net9.0\BaseModules.IAM.Domain.deps.json
+D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Domain\bin\Debug\net9.0\BaseModules.IAM.Domain.dll
+D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Domain\bin\Debug\net9.0\BaseModules.IAM.Domain.pdb
+D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Domain\obj\Debug\net9.0\BaseModules.IAM.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Domain\obj\Debug\net9.0\BaseModules.IAM.Domain.AssemblyInfoInputs.cache
+D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Domain\obj\Debug\net9.0\BaseModules.IAM.Domain.AssemblyInfo.cs
+D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Domain\obj\Debug\net9.0\BaseModules.IAM.Domain.csproj.CoreCompileInputs.cache
+D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Domain\obj\Debug\net9.0\BaseModules.IAM.Domain.sourcelink.json
+D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Domain\obj\Debug\net9.0\BaseModules.IAM.Domain.dll
+D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Domain\obj\Debug\net9.0\refint\BaseModules.IAM.Domain.dll
+D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Domain\obj\Debug\net9.0\BaseModules.IAM.Domain.pdb
+D:\Projects\Hirovo\HirovoBackend\BaseModules\IAM\BaseModules.IAM.Domain\obj\Debug\net9.0\ref\BaseModules.IAM.Domain.dll

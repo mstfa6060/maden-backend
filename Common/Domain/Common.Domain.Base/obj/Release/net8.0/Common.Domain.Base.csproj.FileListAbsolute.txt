@@ -1,0 +1,12 @@
+D:\Projects\Hirovo\HirovoBackend\Common\Domain\Common.Domain.Base\bin\Release\net8.0\Common.Domain.Base.deps.json
+D:\Projects\Hirovo\HirovoBackend\Common\Domain\Common.Domain.Base\bin\Release\net8.0\Common.Domain.Base.dll
+D:\Projects\Hirovo\HirovoBackend\Common\Domain\Common.Domain.Base\bin\Release\net8.0\Common.Domain.Base.pdb
+D:\Projects\Hirovo\HirovoBackend\Common\Domain\Common.Domain.Base\obj\Release\net8.0\Common.Domain.Base.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Hirovo\HirovoBackend\Common\Domain\Common.Domain.Base\obj\Release\net8.0\Common.Domain.Base.AssemblyInfoInputs.cache
+D:\Projects\Hirovo\HirovoBackend\Common\Domain\Common.Domain.Base\obj\Release\net8.0\Common.Domain.Base.AssemblyInfo.cs
+D:\Projects\Hirovo\HirovoBackend\Common\Domain\Common.Domain.Base\obj\Release\net8.0\Common.Domain.Base.csproj.CoreCompileInputs.cache
+D:\Projects\Hirovo\HirovoBackend\Common\Domain\Common.Domain.Base\obj\Release\net8.0\Common.Domain.Base.sourcelink.json
+D:\Projects\Hirovo\HirovoBackend\Common\Domain\Common.Domain.Base\obj\Release\net8.0\Common.Domain.Base.dll
+D:\Projects\Hirovo\HirovoBackend\Common\Domain\Common.Domain.Base\obj\Release\net8.0\refint\Common.Domain.Base.dll
+D:\Projects\Hirovo\HirovoBackend\Common\Domain\Common.Domain.Base\obj\Release\net8.0\Common.Domain.Base.pdb
+D:\Projects\Hirovo\HirovoBackend\Common\Domain\Common.Domain.Base\obj\Release\net8.0\ref\Common.Domain.Base.dll
