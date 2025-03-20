@@ -1,41 +1,45 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Arfware.ArfBlocks.Core.Extentions;
+using Arfware.ArfBlocks.Core;
+// using Common.Services.Environment;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+// var configurations = builder.Configuration.GetSection("ProjectConfigurations").Get<ProjectConfigurations>();
+// var environmentService = new EnvironmentService(configurations.EnvironmentConfiguration);
+
+string DefaultCorsPolicy = "DefaultCorsPolicy";
+builder.Services.AddCors(options =>
+{
+    // Development Cors Policy
+    options.AddPolicy(name: DefaultCorsPolicy,
+        builder =>
+        {
+            builder.AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowAnyOrigin();
+        });
+});
+
+// ArfBlocks Dependencies
+builder.Services.AddArfBlocks(options =>
+{
+    options.ApplicationProjectNamespace = "BaseModules.IAM.Application";
+    options.ConfigurationSection = builder.Configuration.GetSection("ProjectConfigurations");
+    options.LogLevel = LogLevels.Warning;
+    // options.PreOperateHandler = typeof(BaseModules.IAM.Application.DefaultHandlers.Operators.Commands.PreOperate.Handler);
+    // options.PostOperateHandler = typeof(BaseModules.IAM.Application.DefaultHandlers.Operators.Commands.PostOperate.Handler);
+});
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-}
+app.UseCors(DefaultCorsPolicy);
 
-app.UseHttpsRedirection();
-
-var summaries = new[]
+app.UseArfBlocksRequestHandlers(options =>
 {
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast");
+    // options.AuthorizationOptions.Audience = JwtService.Audience;
+    // options.AuthorizationOptions.Secret = JwtService.Secret;
+});
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
