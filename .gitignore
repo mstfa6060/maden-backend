@@ -1,10 +1,15 @@
-# Build Klasörlerini Hariç Tut
+# Derleme ve geçici dosyalar
 bin/
 obj/
+publish/
+TestResults/
+*.dll
+*.pdb
+*.exe
 
-# VS Code ve Rider için gereksiz dosyalar
+# Visual Studio ve Rider için gereksiz dosyalar
 .vs/
 .idea/
 *.suo
 *.user
-*.vscode/
+*.sln.docstates
