@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\BaseModules.IAM.Api.props" />
-</Project>

@@ -6,8 +6,10 @@ TestResults/
 *.dll
 *.pdb
 *.exe
+*.cache
+*.log
 
-# Visual Studio ve Rider için gereksiz dosyalar
+# Visual Studio ve Rider gereksiz dosyalar
 .vs/
 .idea/
 *.suo
