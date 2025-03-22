@@ -11,7 +11,7 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=hirovo_db;User=sa;Password=FRAudnxd4rzcVPt;TrustServerCertificate=True;
+      - ConnectionStrings__DefaultConnection=Server=Server=sql-server;Database=HirovoDb;User=sa;Password=FRAudnxd4rzcVPt;TrustServerCertificate=True;
     networks:
       - hirovo-network
 
