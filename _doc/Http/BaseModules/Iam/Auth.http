@@ -71,10 +71,10 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "userName": "johndoe",
+    "userName": "johndo1e",
     "firstName": "John",
     "surname": "Doe",
-    "email": "johndoe@example.com",
+    "email": "johndoe@example1.com",
     "password": "SecureP@ss123",
     "userType": 1,
     "companyId": "550e8400-e29b-41d4-a716-446655440000",
