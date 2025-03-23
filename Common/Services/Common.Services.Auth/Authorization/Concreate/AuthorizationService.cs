@@ -260,4 +260,26 @@ public partial class AuthorizationService : IAuthorizationService
         return hasPermission;
     }
 
+    public async Task CheckAccess(Guid userId, string permission)
+    {
+        // Kullanıcının rol ID'lerini al
+        var roleIds = await _dbContext.UserRoles
+            .Where(ur => ur.UserId == userId)
+            .Select(ur => ur.RoleId)
+            .ToListAsync();
+
+        if (roleIds == null || !roleIds.Any())
+            new ArfBlocksVerificationException(ErrorCodeGenerator.ErrorCodeGenerator.GetErrorCode(() => DomainErrors.AuthorizationServiceErrors.UserDoesNotHaveSufficientPermission));
+
+
+        // Bu rollerden herhangi biri ilgili permission'a sahip mi?
+        var hasPermission = await _dbContext.RolePermissions
+       .Where(rp => roleIds.Contains(rp.RoleId) && rp.Permission == permission)
+       .AnyAsync();
+
+        if (!hasPermission)
+            new ArfBlocksVerificationException(ErrorCodeGenerator.ErrorCodeGenerator.GetErrorCode(() => DomainErrors.AuthorizationServiceErrors.UserDoesNotHaveSufficientPermission));
+
+    }
+
 }

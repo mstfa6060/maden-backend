@@ -4,13 +4,13 @@ namespace BaseModules.IAM.Application.RequestHandlers.Roles.Commands.Create;
 public class Verificator : IRequestVerificator
 {
     private readonly IamDbValidationService _dbVerificator;
-    // private readonly CurrentUserService _currentUserService;
+    private readonly CurrentUserService _currentUserService;
     private readonly AuthorizationService _authorizationService;
 
     public Verificator(ArfBlocksDependencyProvider dependencyProvider)
     {
         _dbVerificator = dependencyProvider.GetInstance<IamDbValidationService>();
-        // _currentUserService = dependencyProvider.GetInstance<CurrentUserService>();
+        _currentUserService = dependencyProvider.GetInstance<CurrentUserService>();
         _authorizationService = dependencyProvider.GetInstance<AuthorizationService>();
     }
 
@@ -22,11 +22,8 @@ public class Verificator : IRequestVerificator
                                  .Assert();
 
         // Sadece sistem adminlerine izin ver
-        bool isAdmin = await _authorizationService.IsSystemAdmin(ModuleTypes.Platform);
-        if (!isAdmin)
-        {
-            throw new ArfBlocksVerificationException("Sadece sistem yöneticileri rol işlemi yapabilir.");
-        }
+        await _authorizationService.CheckAccess(_currentUserService.GetCurrentUserId(), "Roles.Create");
+
         await Task.CompletedTask;
 
     }

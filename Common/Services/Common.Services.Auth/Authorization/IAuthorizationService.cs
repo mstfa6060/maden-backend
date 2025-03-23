@@ -29,4 +29,11 @@ public interface IAuthorizationService
     public Task<bool> IsSystemAdmin(ModuleTypes moduleType);
     Task<bool> HasNamespacePermission(Guid userId, string namespacePath);
 
+    /// <summary>
+    /// Kullanıcının belirli bir izne sahip olup olmadığını kontrol eder.
+    /// </summary>
+    /// <param name="userId">Aktif kullanıcı</param>
+    /// <param name="permission">İzin tanımı (örn: "Roles.Create")</param>
+    /// <returns>Yetkiliyse devam eder, değilse exception fırlatır</returns>
+    Task CheckAccess(Guid userId, string permission);
 }

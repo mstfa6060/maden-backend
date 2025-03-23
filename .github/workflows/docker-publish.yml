@@ -22,6 +22,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./_devops/docker
+          context: .
+          file: ./_devops/docker/Dockerfile
           push: true
           tags: mstfaock/hirovo-api:latest
