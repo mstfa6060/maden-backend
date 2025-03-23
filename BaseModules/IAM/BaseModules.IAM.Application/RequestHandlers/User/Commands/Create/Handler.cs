@@ -12,7 +12,7 @@ public class Handler : IRequestHandler
 		_communicator = dependencyProvider.GetInstance<ArfBlocksCommunicator>();
 		_environmentService = dependencyProvider.GetInstance<EnvironmentService>();
 	}
-
+	
 	public async Task<ArfBlocksRequestResult> Handle(IRequestModel payload, EndpointContext context, CancellationToken cancellationToken)
 	{
 		var mapper = new Mapper();

@@ -37,7 +37,7 @@ global using Common.Services.Auth.CurrentUser;
 //global using Common.Connectors.File;
 //global using Common.Connectors.Mail;
 //global using Common.Connectors.Sms;
-//global using Common.Services.Auth.JsonWebToken;
+global using Common.Services.Auth.JsonWebToken;
 global using Common.Services.Environment;
 global using Common.Services.Auth.Authorization;
 //global using Common.Connectors.File.Models;

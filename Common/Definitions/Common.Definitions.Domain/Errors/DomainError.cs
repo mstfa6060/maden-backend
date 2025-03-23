@@ -2,6 +2,41 @@ namespace Common.Definitions.Domain.Errors;
 
 public class DomainErrors
 {
+    public class AuthErrors
+    {
+        // Model Validation
+        public static string UserIdNotValid { get; set; } = "";
+
+        // Database Validation
+        public static string UserNotExist { get; set; } = "";
+        public static string UserBlocked { get; set; } = "";
+        public static string UserBanned { get; set; } = "";
+        public static string UserDeleted { get; set; } = "";
+        public static string AdAccountsCanBeDeletedByAdministrator { get; set; } = "";
+        public static string UserCanDeleteOnlyOwnAccount { get; set; } = "";
+        public static string EmailOrPasswordIncorrect { get; set; } = "";
+        public static string UserLoginCodeNotBelongToRequestedUser { get; set; } = "";
+        public static string UserLoginCodeIsExpired { get; set; } = "";
+        public static string UserLoginCodeIsNotExpired { get; set; } = "";
+        public static string UserLoginCodeIsNotCorrect { get; set; } = "";
+        public static string UserLoginCodeNotExist { get; set; } = "";
+        public static string DeviceIdNotValid { get; set; } = "";
+        public static string ApprovalExpired { get; set; } = "";
+        public static string ApprovalHasOwner { get; set; } = "";
+        public static string ApprovalStatusIsInvalid { get; set; } = "";
+        public static string UserCanOnlyMakeActionsForSelf { get; set; } = "";
+        public static string ApprovalNotFound { get; set; } = "";
+        public static string QrCounterHasException { get; set; } = "";
+        public static string QrJobTaskCancelled { get; set; } = "";
+        public static string QrJobTaskHasException { get; set; } = "";
+        public static string IdentityNumberCannotBeEmpty { get; set; } = "";
+        public static string IdentityNumberIsInvalid { get; set; } = "";
+        public static string VerificationIdCannotBeEmpty { get; set; } = "";
+        public static string VerificationIdInvalidFormat { get; set; } = "";
+        public static string VerificationEnvironmentInvalidFormat { get; set; } = "";
+        public static string VerificationMerkezBirligiUserCanLogin { get; set; } = "";
+        public static string TenantIdIsNotGuidEmpty { get; set; } = "";
+    }
     public class CommonErrors
     {
         // Model Validation
@@ -100,6 +135,8 @@ public class DomainErrors
     public class UserProxyErrors
     {
         public static string UserProxyNotExist { get; set; } = "";
+        public static object EndDateCantBeSmallerThanThisHour { get; set; }
+        public static object EndDateCantBeSmallerThanStartDate { get; set; }
     }
     public class CompanySettingErrors
     {

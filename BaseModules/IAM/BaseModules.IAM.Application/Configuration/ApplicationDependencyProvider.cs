@@ -20,20 +20,20 @@ public class ApplicationDependencyProvider : ArfBlocksDependencyProvider
 		// base.Add<FileConnectorOptions>(projectConfigurations.FileConnectorOptions);
 		// base.Add<KoopCardClientOptions>(projectConfigurations.KoopCardClientOptions);
 		base.Add<IHttpContextAccessor>(httpContextAccessor);
-		// base.Add<CurrentUserModel>(new CurrentUserModel());
+		base.Add<CurrentUserModel>(new CurrentUserModel());
 		// base.Add<AuditLogService>();
 
 		// // Types
 		base.Add<EnvironmentService>();
-		// base.Add<HttpService>();
-		// base.Add<CurrentUserService>(); 
+		base.Add<HttpService>();
+		base.Add<CurrentUserService>();
 		base.Add<DefinitionDbContextOptions>();
 		base.Add<DefinitionDbContext>();
 		base.Add<IamDbContextOptions>();
 		base.Add<IamDbContext>();
 		// base.Add<IamDocumentDbContext>();
 		base.Add<IamDbValidationService>();
-		// base.Add<IamDbVerificationService>();
+		base.Add<IamDbVerificationService>();
 
 		// base.Add<IOpenLdapClient, OpenLdapClient>();
 		// base.Add<IMerkezBirligiClient, MerkezBirligiClient>();
@@ -47,11 +47,11 @@ public class ApplicationDependencyProvider : ArfBlocksDependencyProvider
 		// base.Add<IamNotificationConnector>();
 		// base.Add<FileConnector>();
 		// base.Add<IamFileConnector>();
-		// base.Add<IJwtService, JwtService>();
+		base.Add<IJwtService, JwtService>();
 		// base.Add<IUserLoginRecordService, UserLoginRecordService>();
 
 		// // For Authorization Operations
-		// base.Add<AuthorizationService>();
+		base.Add<AuthorizationService>();
 		base.Add<DbContext, IamDbContext>();
 
 		// Communication

@@ -3,9 +3,7 @@
 #  @Url=http://3.88.252.189:5000
 # @Url= https://api-test.toprak.tkholding.com.tr/koopposbackoffice
 
-//merve.dursun
-  @Jwt = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIyNjA4MDZlMS1lZjJiLTQ2MDMtYmViOS0wOGRiZDYyMjYzMTQiLCJnaXZlbl9uYW1lIjoibWVydmUuZHVyc3VuIiwidW5pcXVlX25hbWUiOiJNZXJ2ZSBEVVJTVU4iLCJ0ZW5hbnRpZCI6IjhhNzc5ODE0LTY2MGEtNGFmNS1iNzc1LTU5OTFkZjRhYjdiZiIsImRlcGFydG1lbnRJZCI6IjUwYTIzMmNhLWVlOWEtNDM2MC0yMGMwLTA4ZGJmYTUwNzc5OCIsInBsYXRmb3JtIjoiMCIsIm5iZiI6MTcxOTgyMjE3NCwiZXhwIjoxNzIwMDgxMzc0LCJpYXQiOjE3MTk4MjIxNzQsImF1ZCI6ImlhbS50b3ByYWsudGtob2xkaW5nLmNvbS50ciJ9.GhfyNoNSBNCDSxHErN8tAtla1RKdlMyFxJDsYbTlB84
-
+  @Jwt =  ""
 
 
 ### Create
@@ -71,10 +69,10 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "userName": "johndo1e",
+    "userName": "johndo1e1",
     "firstName": "John",
     "surname": "Doe",
-    "email": "johndoe@example1.com",
+    "email": "johndoe@example11.com",
     "password": "SecureP@ss123",
     "userType": 1,
     "companyId": "550e8400-e29b-41d4-a716-446655440000",
@@ -115,3 +113,18 @@ Content-Type: application/json
     "companyId": "550e8400-e29b-41d4-a716-446655440000",
     "userSource": 2
 }
+
+
+
+### Login
+POST {{Url}}/Auth/Login
+Accept: application/json
+Content-Type: application/json
+
+{
+  "provider": "native",
+  "userName": "johndo1e1",
+  "password": "SecureP@ss123",
+  "platform": 0
+}
+
