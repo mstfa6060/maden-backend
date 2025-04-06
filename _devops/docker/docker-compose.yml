@@ -73,7 +73,7 @@ services:
   
   jenkins:
     build:
-      context: ./_devops/docker
+      context: .
       dockerfile: Dockerfile-jenkins-dotnet
     container_name: jenkins
     ports:
