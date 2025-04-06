@@ -1,0 +1,75 @@
+pipeline {
+    agent any
+
+    environment {
+        TAG = "${BUILD_NUMBER}-${env.GIT_COMMIT.substring(0, 6)}"
+        IMAGE_NAME = "mstfaock/hirovo-api"
+    }
+
+    stages {
+        stage('Docker Image Build') {
+            steps {
+                sh '''
+                    echo "🛠️ Docker imajı oluşturuluyor: $IMAGE_NAME:$TAG"
+                    docker build -t $IMAGE_NAME:$TAG -f _devops/docker/Dockerfile-modules-hirovo .
+                    docker tag $IMAGE_NAME:$TAG $IMAGE_NAME:latest
+                '''
+            }
+        }
+
+        stage('DockerHub Push') {
+            steps {
+                withCredentials([
+                    usernamePassword(
+                        credentialsId: 'dockerhub-credentials',
+                        usernameVariable: 'DOCKER_USERNAME',
+                        passwordVariable: 'DOCKER_PASSWORD'
+                    )
+                ]) {
+                    sh '''
+                        echo "🔐 DockerHub giriş yapılıyor..."
+                        echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+                        docker push $IMAGE_NAME:$TAG
+                        docker push $IMAGE_NAME:latest
+                        docker logout
+                    '''
+                }
+            }
+        }
+
+        stage('Sunucuya Deploy Et') {
+            steps {
+                withCredentials([
+                    sshUserPrivateKey(
+                        credentialsId: 'hirovo-server-key',
+                        keyFileVariable: 'PEM_KEY'
+                    )
+                ]) {
+                    sh '''
+                        echo "🚀 Sunucuya deploy başlatılıyor..."
+                        ssh -i "$PEM_KEY" -o StrictHostKeyChecking=no root@45.143.4.64 << 'EOF'
+                            cd ~/hirovo-api/_devops/docker
+                            docker-compose pull
+                            docker-compose up -d --build
+                        EOF
+                    '''
+                }
+            }
+        }
+
+        stage('Tamamlandı') {
+            steps {
+                echo '✅ Backend API deploy işlemi başarıyla tamamlandı.'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo '🎉 Jenkins pipeline başarıyla tamamlandı.'
+        }
+        failure {
+            echo '❌ Jenkins pipeline başarısız oldu.'
+        }
+    }
+}
