@@ -1,22 +1,30 @@
-# Dockerfile (örnek)
+# 1️⃣ Temel runtime imajı (sadece çalıştırma için)
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 EXPOSE 8080
 
+# 2️⃣ Build aşaması (kodun derlenmesi için SDK kullanılıyor)
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
+# 🔄 Proje dosyalarının tamamını kopyala
 COPY . .
 
+# 🔧 Bağımlılıkları indir
 RUN dotnet restore ./Hirovo.sln
-RUN dotnet publish   h ./BaseModules/IAM/BaseModules.IAM.Api/BaseModules.IAM.Api.csproj -c Release -o /app/publish
 
+# 🛠️ Publish işlemi — ⚠️ yazım hatası vardı: publis → publish
+RUN dotnet publish ./BaseModules/IAM/BaseModules.IAM.Api/BaseModules.IAM.Api.csproj -c Release -o /app/publish
+
+# 3️⃣ Son aşama — sadece çıktı dosyaları kalacak
 FROM base AS final
 WORKDIR /app
 
-# 🔥 appsettings.json'u ekliyoruz
+# 🛡️ appsettings.json'u da dahil et (opsiyonel: zaten publish içine kopyalanmış olabilir)
 COPY ./BaseModules/IAM/BaseModules.IAM.Api/appsettings.json ./BaseModules/IAM/BaseModules.IAM.Api/appsettings.json
 
+# 🗂️ Build aşamasından publish klasörünü al
 COPY --from=build /app/publish .
 
+# 🚀 Başlangıç komutu
 ENTRYPOINT ["dotnet", "BaseModules.IAM.Api.dll"]
