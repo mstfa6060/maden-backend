@@ -1,38 +1,23 @@
-# -------------------------------
-# 1. Build aşaması
-# -------------------------------
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
+
+# Copy everything else and build
+COPY . /src
 WORKDIR /src
+RUN dotnet restore
+RUN dotnet build
 
-# Tüm backend içeriğini kopyala (Common klasörü de dahil!)
-COPY ./backend . 
+# Publish
+WORKDIR /src/BaseModules/IAM/BaseModules.IAM.Api/
+RUN dotnet publish -c release -o /Output --no-restore
 
-# Bağımlılıkları indir
-RUN dotnet restore Hirovo.sln
+# Final stage / image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /App
+COPY --from=build /Output .
 
-# Uygulamayı derle
-RUN dotnet build Hirovo.sln -c Release --no-restore
-
-# Publish et
-RUN dotnet publish ./BaseModules/IAM/BaseModules.IAM.Api/BaseModules.IAM.Api.csproj -c Release -o /app/publish --no-restore
-
-# -------------------------------
-# 2. Runtime aşaması
-# -------------------------------
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
-
-WORKDIR /app
-
-# Zaman dilimi ayarı (opsiyonel)
-RUN apt-get update && apt-get install -y tzdata
-ENV TZ=Europe/Istanbul
-
-# appsettings.json'u kopyala
-COPY ./backend/BaseModules/IAM/BaseModules.IAM.Api/appsettings.json ./appsettings.json
-
-# Publish edilen uygulamayı al
-COPY --from=build /app/publish .
+RUN apt update && apt install tzdata -y
+ENV TZ="Europe/Istanbul"
 
 EXPOSE 8080
 ENTRYPOINT ["dotnet", "BaseModules.IAM.Api.dll"]
