@@ -14,7 +14,7 @@ services:
       - hirovo-network
 
   iam-api:
-    image: mstfaock/hirovo-iam-api:latest
+    image: mstfaock/maden-iam-api:latest       # GÜNCELLENDİ
     container_name: iam-api-container
     ports:
       - "8081:8080"
@@ -26,7 +26,7 @@ services:
       - hirovo-network
 
   api-gateway:
-    image: mstfaock/hirovo-api-gateway:latest
+    image: mstfaock/maden-api-gateway:latest   # GÜNCELLENDİ
     container_name: hirovo-api-gateway
     ports:
       - "5000:8080"
@@ -70,7 +70,7 @@ services:
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do sleep 6h & wait $${!}; certbot renew; done'"
-  
+
   jenkins:
     build:
       context: .
@@ -86,12 +86,10 @@ services:
     networks:
       - hirovo-network
 
-
 volumes:
   certbot-etc:
   certbot-var:
   jenkins_home:
-
 
 networks:
   hirovo-network:
