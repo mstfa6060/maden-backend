@@ -13,7 +13,7 @@
         },
         {
           "key": "output",
-          "value": "../../maden-frontend/frontend-hirovo/common/hirovo-api/src/api/business_modules/hirovo"
+          "value": "../maden-frontend/frontend-hirovo/common/hirovo-api/src/api/business_modules/hirovo"
         },
         {
           "key": "endpointBaseRoute",
@@ -54,7 +54,7 @@
         },
         {
           "key": "output",
-          "value": "../../mobileapp/hirovo-mobileapp/common/hirovo-api/src/api/business_modules/hirovo"
+          "value": "../mobileapp/hirovo-mobileapp/common/hirovo-api/src/api/business_modules/hirovo"
         },
         {
           "key": "endpointBaseRoute",

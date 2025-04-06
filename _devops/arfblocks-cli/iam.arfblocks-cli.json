@@ -13,7 +13,7 @@
         },
         {
           "key": "output",
-          "value": "../../maden-frontend/frontend-hirovo/common/hirovo-api/src/api/base_modules/iam"
+          "value": "../maden-frontend/frontend-hirovo/common/hirovo-api/src/api/base_modules/iam"
         },
         {
           "key": "outputImports",
@@ -46,7 +46,7 @@
         },
         {
           "key": "output",
-          "value": "../../mobileapp/hirovo-mobileapp/common/hirovo-api/src/api/base_modules/iam"
+          "value": "../mobileapp/hirovo-mobileapp/common/hirovo-api/src/api/base_modules/iam"
         },
         {
           "key": "outputImports",
