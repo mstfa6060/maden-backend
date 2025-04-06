@@ -1,130 +1,40 @@
 pipeline {
     agent any
 
-    environment {
-        TAG = "${BUILD_NUMBER}-${env.GIT_COMMIT.substring(0, 6)}"
-    }
-
     stages {
-        stage('Hazırlık - Web/Mobile klasörlerini oluştur') {
-            steps {
-                sh '''
-                    mkdir -p ./_devops/tmp/webapp
-                    mkdir -p ./_devops/tmp/mobileapp
-                    cp -r /maden/maden-frontend/common ./_devops/tmp/webapp/
-                    cp -r /maden/mobileapp/common ./_devops/tmp/mobileapp/
-                '''
-            }
-        }
-
-        stage('Docker Image Build - Docs Generator') {
+        stage('Sunucuya Deploy Et') {
             steps {
                 withCredentials([
                     sshUserPrivateKey(
-                        credentialsId: 'mobileapp-deploy-key',
-                        keyFileVariable: 'SSH_KEY_PATH',
-                        usernameVariable: 'SSH_USERNAME'
-                    ),
-                    usernamePassword(
-                        credentialsId: 'dockerhub-credentials',
-                        usernameVariable: 'USERNAME',
-                        passwordVariable: 'PASSWORD'
+                        credentialsId: 'hirovo-server-key',
+                        keyFileVariable: 'PEM_KEY'
                     )
                 ]) {
                     sh '''
-                        mkdir -p _devops/ssh
-                        cp "$SSH_KEY_PATH" _devops/ssh/id_rsa_mobileapp
-                        chmod 600 _devops/ssh/id_rsa_mobileapp
-
-                        docker build -t registry.git.hirovo.com.tr/arfblocks-cli:$TAG \
-                        --build-arg git_username=$USERNAME \
-                        --build-arg git_password=$PASSWORD \
-                        -f _devops/docker/Dockerfile-api-doc-generator .
+                        echo "🚀 GitHub Actions'dan gelen imaj deploy ediliyor..."
+                        ssh -i "$PEM_KEY" -o StrictHostKeyChecking=no root@45.143.4.64 << 'EOF'
+                            cd ~/hirovo-api/_devops/docker
+                            docker-compose pull
+                            docker-compose up -d --build
+                        EOF
                     '''
                 }
             }
         }
 
-stage('Çıktıları Host’a Kopyala - Hirovo') {
-    steps {
-        sh '''
-            docker run --rm \
-                -v $PWD/_devops/tmp/webapp:/out \
-                registry.git.hirovo.com.tr/arfblocks-cli:$TAG \
-                cp -r /maden/backend/_devops/tmp/webapp/common/hirovo-api/src/api/business_modules/hirovo /out || true
-        '''
-    }
-}
-
-stage('Çıktıları Host’a Kopyala - IAM') {
-    steps {
-        sh '''
-            docker run --rm \
-                -v $PWD/_devops/tmp/webapp:/out \
-                registry.git.hirovo.com.tr/arfblocks-cli:$TAG \
-                cp -r /maden/backend/webapp/common/hirovo-api/src/api/base_modules/iam /out || true
-        '''
-    }
-}
-
-
-        stage('Push ArfBlocks Dokümantasyonları') {
+        stage('Tamamlandı') {
             steps {
-                withCredentials([
-                    sshUserPrivateKey(
-                        credentialsId: 'mobileapp-deploy-key',
-                        keyFileVariable: 'SSH_KEY_PATH',
-                        usernameVariable: 'SSH_USERNAME'
-                    )
-                ]) {
-                    sh '''
-                        export GIT_SSH_COMMAND="ssh -i $SSH_KEY_PATH -o StrictHostKeyChecking=no"
-
-                        # Frontend (webapp) güncelle
-                        cd _devops/tmp/webapp
-                        git init
-                        git remote remove origin || true
-                        git remote add origin git@github.com:mstfa6060/maden-frontend.git
-                        git checkout -B main
-                        git config user.name "CI/CD-BOT"
-                        git config user.email "bot@hirovo.com"
-                        if [ -n "$(git status --porcelain)" ]; then
-                            git add .
-                            git commit -m "📦 API dokümantasyonu güncellendi - $TAG"
-                            git push origin main --force
-                        fi
-
-                        # Mobil güncelle
-                        cd ../mobileapp
-                        git init
-                        git remote remove origin || true
-                        git remote add origin git@github.com:mstfa6060/mobileapp.git
-                        git checkout -B main
-                        git config user.name "CI/CD-BOT"
-                        git config user.email "bot@hirovo.com"
-                        if [ -n "$(git status --porcelain)" ]; then
-                            git add .
-                            git commit -m "📦 Mobil API dokümantasyonu güncellendi - $TAG"
-                            git push origin main --force
-                        fi
-                    '''
-                }
-            }
-        }
-
-        stage('Bitti') {
-            steps {
-                echo '✅ Jenkinsfile_doc_generator başarıyla tamamlandı.'
+                echo '✅ DockerHub imajı sunucuya deploy edildi.'
             }
         }
     }
 
     post {
-        always {
-            echo '⏹ Pipeline Completed'
+        success {
+            echo '🎉 Deploy pipeline başarıyla tamamlandı.'
         }
         failure {
-            echo '❌ Pipeline Failed'
+            echo '❌ Deploy pipeline başarısız oldu.'
         }
     }
 }
