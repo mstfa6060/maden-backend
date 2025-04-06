@@ -1,0 +1,43 @@
+pipeline {
+    agent any
+
+    environment {
+        TAG = "${BUILD_NUMBER}-${env.GIT_COMMIT.substring(0, 6)}"
+    }
+
+    stages {
+        stage('Docker Image Build - Docs Generator') {
+            steps {
+                withCredentials([
+                    usernamePassword(
+                        credentialsId: 'dockerhub-credentials',
+                        usernameVariable: 'USERNAME',
+                        passwordVariable: 'PASSWORD'
+                    )
+                ]) {
+                    sh '''
+                        docker build -t registry.git.hirovo.com.tr/arfblocks-cli:$TAG \
+                        --build-arg git_username=$USERNAME \
+                        --build-arg git_password=$PASSWORD \
+                        -f _devops/docker/Dockerfile-api-doc-generator .
+                    '''
+                }
+            }
+        }
+
+        stage('Bitti') {
+            steps {
+                echo '✅ Jenkinsfile_doc_generator tamamlandı. (Push işlemleri ve CLI dokümantasyonu çıkarıldı)'
+            }
+        }
+    }
+
+    post {
+        always {
+            echo '⏹ Pipeline Completed'
+        }
+        failure {
+            echo '❌ Pipeline Failed'
+        }
+    }
+}
