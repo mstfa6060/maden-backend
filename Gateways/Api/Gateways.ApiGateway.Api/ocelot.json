@@ -47,6 +47,24 @@
 			"AuthenticationOptions": {
 				"AuthenticationProviderKey": "5V-3TKad=*+9qFRp!%Ee7?a5#qQm7t9rHe%Ejg2*J4@EZ!@U02"
 			}
+		},
+		{
+			"DownstreamPathTemplate": "/",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [
+				{
+					"Host": "hirovo-api-container",
+					"Port": 8080
+				}
+			],
+			"UpstreamPathTemplate": "/",
+			"UpstreamHttpMethod": [
+				"GET",
+				"POST",
+				"PUT",
+				"DELETE",
+				"PROPFIND"
+			]
 		}
 	],
 	"GlobalConfiguration": {
