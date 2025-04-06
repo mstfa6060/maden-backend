@@ -2,17 +2,18 @@ pipeline {
     agent any
 
     environment {
-        HOST = "root@45.143.4.64"
-        SERVICE_PATH = "/maden/backend/_devops/docker"
+        TAG = "${BUILD_NUMBER}-${env.GIT_COMMIT.substring(0, 6)}"
+        IMAGE_NAME = "arfblocks-cli"
     }
 
     stages {
         stage('Sunucuya Deploy Et') {
             steps {
-                withCredentials([
-                    sshUserPrivateKey(
-                        credentialsId: 'maden-server-key',
-                        keyFileVariable: 'PEM_KEY'
+ withCredentials([
+                    usernamePassword(
+                        credentialsId: 'dockerhub-credentials',
+                        usernameVariable: 'USERNAME',
+                        passwordVariable: 'PASSWORD'
                     )
                 ]) {
                     sh '''
