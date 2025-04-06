@@ -1,0 +1,146 @@
+
+ @Url= http://localhost:5000
+#  @Url=http://3.88.252.189:5000
+# @Url= https://api-test.toprak.tkholding.com.tr/koopposbackoffice
+
+  @Jwt =  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIyODM2NzJlNC0xYWU4LTQ1YTctYTkxNC1lMmRlZGQwMjgwYjIiLCJnaXZlbl9uYW1lIjoiam9obmRvMWUxIiwidW5pcXVlX25hbWUiOiJKb2huIERvZSIsInBsYXRmb3JtIjoiMCIsInVzZXJTb3VyY2UiOiIwIiwibmJmIjoxNzQyOTk3OTQ3LCJleHAiOjE3NDM2MDI3NDcsImlhdCI6MTc0Mjk5Nzk0NywiYXVkIjoiaWFtLnRvcHJhay50a2hvbGRpbmcuY29tLnRyIn0.bijr_mwoFDm66rGgGtxoAi03FnVwfQOUCewmpEL7msE"
+
+
+### Create
+POST {{Url}}/Roles/Create
+Authorization: Bearer {{Jwt}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": "d290f1ee-6c54-4b01-90e6-d701748f0851",
+  "name": "Admin4"
+}
+
+
+
+### Update
+POST {{Url}}/Roles/Update
+Authorization: Bearer {{Jwt}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": "A1D5B3E4-8E5A-4B3C-9EF5-D3E5A3B7C1F8",
+  "name": "Admin"
+}
+
+
+
+### Delete
+POST {{Url}}/Roles/Delete
+Authorization: Bearer {{Jwt}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": "A1D5B3E4-8E5A-4B3C-9EF5-D3E5A3B7C1F8",
+  "isDeleted": false
+}
+
+
+
+### Delete
+POST {{Url}}/Roles/All
+Authorization: Bearer {{Jwt}}
+Accept: application/json
+Content-Type: application/json
+
+{
+    "sorting": null,
+    "filters": [],
+    "pageRequest": {
+        "perPageCount": 20,
+        "currentPage": 1,
+        "listAll": false
+    }
+}
+
+
+### Manuel Kayıt
+POST {{Url}}/Users/Create
+Authorization: Bearer {{Jwt}}
+Accept: application/json
+Content-Type: application/json
+
+{
+    "userName": "johndo1e1",
+    "firstName": "John",
+    "surname": "Doe",
+    "email": "johndoe@example11.com",
+    "password": "SecureP@ss123",
+    "userType": 1,
+    "companyId": "550e8400-e29b-41d4-a716-446655440000",
+    "userSource": 0
+}
+
+
+### Google Kayıt (OAuth)
+POST {{Url}}/Users/Create
+Accept: application/json
+Content-Type: application/json
+
+{
+    "userName": "johndoe_google",
+    "firstName": "John",
+    "surname": "Doe",
+    "email": "johndowe@gmail.com",
+    "providerId": "11223344556677889900",
+    "userType": 1,
+    "companyId": "550e8400-e29b-41d4-a716-446655440000",
+    "userSource": 1
+}
+
+
+
+### Apple Kayıt (OAuth)cd
+POST {{Url}}/Users/Create
+Accept: application/json
+Content-Type: application/json
+
+{
+    "userName": "johndoe_apple",
+    "firstName": "John",
+    "surname": "Doe",
+    "email": "johndoe@icloud.com",
+    "providerId": "A1B2C3D4E5F6G7H8I9J0",
+    "userType": 1,
+    "companyId": "550e8400-e29b-41d4-a716-446655440000",
+    "userSource": 2
+}
+
+
+
+### Login
+POST {{Url}}/Auth/Login
+Accept: application/json
+Content-Type: application/json
+
+{
+  "provider": "native",
+  "userName": "johndo1e1",
+  "password": "SecureP@ss123",
+  "platform": 0
+}
+
+
+
+
+### update-profile
+POST {{Url}}/Workers/UpdateProfile
+Authorization: Bearer {{Jwt}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "userId": "283672e4-1ae8-45a7-a914-e2dedd0280b2",
+  "city": "Ankara",
+  "phoneNumber": "05001231231"
+}
+
+

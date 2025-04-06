@@ -6,9 +6,27 @@ pipeline {
     }
 
     stages {
+        stage('Hazırlık - Web/Mobile klasörlerini oluştur') {
+            steps {
+                sh '''
+                    rm -rf ./_devops/tmp/webapp
+                    rm -rf ./_devops/tmp/mobileapp
+                    mkdir -p ./_devops/tmp/webapp
+                    mkdir -p ./_devops/tmp/mobileapp
+                    cp -r /maden/maden-frontend/common ./_devops/tmp/webapp/
+                    cp -r /maden/mobileapp/common ./_devops/tmp/mobileapp/
+                '''
+            }
+        }
+
         stage('Docker Image Build - Docs Generator') {
             steps {
                 withCredentials([
+                    sshUserPrivateKey(
+                        credentialsId: 'mobileapp-deploy-key',
+                        keyFileVariable: 'SSH_KEY_PATH',
+                        usernameVariable: 'SSH_USERNAME'
+                    ),
                     usernamePassword(
                         credentialsId: 'dockerhub-credentials',
                         usernameVariable: 'USERNAME',
@@ -16,6 +34,10 @@ pipeline {
                     )
                 ]) {
                     sh '''
+                        mkdir -p _devops/ssh
+                        cp "$SSH_KEY_PATH" _devops/ssh/id_rsa_mobileapp
+                        chmod 600 _devops/ssh/id_rsa_mobileapp
+
                         docker build -t registry.git.hirovo.com.tr/arfblocks-cli:$TAG \
                         --build-arg git_username=$USERNAME \
                         --build-arg git_password=$PASSWORD \
@@ -23,11 +45,93 @@ pipeline {
                     '''
                 }
             }
+        }   
+
+        stage('Temizleme - ArfBlocks bozuk dosyaları sil') {
+        steps {
+        sh '''
+            echo "🧹 ArfBlocks gereksiz dosyalar temizleniyor..."
+            find ./_devops/tmp/webapp -type f ! -name "*.ts" -delete
+            find ./_devops/tmp/mobileapp -type f ! -name "*.ts" -delete
+        '''
+           }
+        }
+
+        stage('Çıktıları Host’a Kopyala - Hirovo') {
+            steps {
+                sh '''
+                    docker run --rm \
+                        -v $PWD/_devops/tmp/webapp:/out \
+                        registry.git.hirovo.com.tr/arfblocks-cli:$TAG \
+                        bash -c "mkdir -p /out/common/hirovo-api/src/api/business_modules && cp -r /maden/backend/_devops/tmp/webapp/common/hirovo-api/src/api/business_modules/hirovo /out/common/hirovo-api/src/api/business_modules/"
+                '''
+            }
+        }
+
+        stage('Çıktıları Host’a Kopyala - IAM') {
+            steps {
+                sh '''
+                    docker run --rm \
+                        -v $PWD/_devops/tmp/webapp:/out \
+                        registry.git.hirovo.com.tr/arfblocks-cli:$TAG \
+                        bash -c "mkdir -p /out/common/hirovo-api/src/api/base_modules && cp -r /maden/backend/webapp/common/hirovo-api/src/api/base_modules/iam /out/common/hirovo-api/src/api/base_modules/"
+                '''
+            }
+        }
+
+        stage('Push ArfBlocks Dokümantasyonları') {
+            steps {
+                withCredentials([
+                    sshUserPrivateKey(
+                        credentialsId: 'mobileapp-deploy-key',
+                        keyFileVariable: 'SSH_KEY_MOBILEAPP'
+                    ),
+                    sshUserPrivateKey(
+                        credentialsId: 'frontend-deploy-key',
+                        keyFileVariable: 'SSH_KEY_FRONTEND'
+                    )
+                ]) {
+                    sh '''
+                        echo "🔐 MobileApp SSH Key: $SSH_KEY_MOBILEAPP"
+                        echo "🔐 Frontend SSH Key: $SSH_KEY_FRONTEND"
+
+                        # Frontend push
+                        export GIT_SSH_COMMAND="ssh -i $SSH_KEY_FRONTEND -o StrictHostKeyChecking=no"
+                        cd _devops/tmp/webapp
+                        git init
+                        git remote remove origin || true
+                        git remote add origin git@github.com:mstfa6060/maden-frontend.git
+                        git checkout -B main
+                        git config user.name "CI/CD-BOT"
+                        git config user.email "bot@hirovo.com"
+                        if [ -n "$(git status --porcelain)" ]; then
+                            git add .
+                            git commit -m "📦 API dokümantasyonu güncellendi - $TAG"
+                            git push origin main --force
+                        fi
+
+                        # Mobileapp push
+                        export GIT_SSH_COMMAND="ssh -i $SSH_KEY_MOBILEAPP -o StrictHostKeyChecking=no"
+                        cd ../mobileapp
+                        git init
+                        git remote remove origin || true
+                        git remote add origin git@github.com:mstfa6060/mobileapp.git
+                        git checkout -B main
+                        git config user.name "CI/CD-BOT"
+                        git config user.email "bot@hirovo.com"
+                        if [ -n "$(git status --porcelain)" ]; then
+                            git add .
+                            git commit -m "📦 Mobil API dokümantasyonu güncellendi - $TAG"
+                            git push origin main --force
+                        fi
+                    '''
+                }
+            }
         }
 
         stage('Bitti') {
             steps {
-                echo '✅ Jenkinsfile_doc_generator tamamlandı. (Push işlemleri ve CLI dokümantasyonu çıkarıldı)'
+                echo '✅ Jenkinsfile_doc_generator başarıyla tamamlandı.'
             }
         }
     }
