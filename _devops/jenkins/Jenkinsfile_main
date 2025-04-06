@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         HOST = "root@45.143.4.64"
-        SERVICE_PATH = "~/hirovo-api/_devops/docker"
+        SERVICE_PATH = "/root/hirovo-api/_devops/docker"
     }
 
     stages {
@@ -11,18 +11,18 @@ pipeline {
             steps {
                 withCredentials([
                     sshUserPrivateKey(
-                        credentialsId: 'maden-server-key',     // 🔐 Güncellenen ID
+                        credentialsId: 'maden-server-key',
                         keyFileVariable: 'PEM_KEY'
                     )
                 ]) {
                     sh '''
                         echo "🚀 GitHub Actions tarafından DockerHub’a gönderilen imaj sunucuya deploy ediliyor..."
 
-                        ssh -i "$PEM_KEY" -o StrictHostKeyChecking=no $HOST << EOF
-                            cd $SERVICE_PATH
+                        ssh -i "$PEM_KEY" -o StrictHostKeyChecking=no root@45.143.4.64 << 'ENDSSH'
+                            cd /root/hirovo-api/_devops/docker
                             docker-compose pull
                             docker-compose up -d --build
-                        EOF
+                        ENDSSH
                     '''
                 }
             }
