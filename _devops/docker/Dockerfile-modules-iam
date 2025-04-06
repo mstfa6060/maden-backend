@@ -1,29 +1,22 @@
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-
-
-# Copy everything else and build
-COPY . /src
-WORKDIR /src
-RUN dotnet restore
-RUN dotnet build
-
-# Test
-
-ARG MODE="DEFAULT"
-WORKDIR /src/BaseModules/IAM/BaseModules.IAM.Application.Test
-RUN dotnet run || $([ "${MODE}" = "SKIPTEST" ]) 
-
-# Publish
-WORKDIR /src/BaseModules/IAM/BaseModules.IAM.Api/
-RUN dotnet publish -c release -o /Output --no-restore
-
-# Final stage / image
-FROM mcr.microsoft.com/dotnet/aspnet:8.0
-WORKDIR /App
-COPY --from=build /Output .
-
-RUN apt update && apt install tzdata -y
-ENV TZ="Europe/Istanbul"
-
+# Dockerfile (örnek)
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+WORKDIR /app
 EXPOSE 8080
+
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+
+COPY . .
+
+RUN dotnet restore ./Hirovo.sln
+RUN dotnet publish ./BaseModules/IAM/BaseModules.IAM.Api/BaseModules.IAM.Api.csproj -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+
+# 🔥 appsettings.json'u ekliyoruz
+COPY ./BaseModules/IAM/BaseModules.IAM.Api/appsettings.json ./BaseModules/IAM/BaseModules.IAM.Api/appsettings.json
+
+COPY --from=build /app/publish .
+
 ENTRYPOINT ["dotnet", "BaseModules.IAM.Api.dll"]
