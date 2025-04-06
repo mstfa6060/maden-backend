@@ -11,7 +11,7 @@ pipeline {
             steps {
                 withCredentials([
                     sshUserPrivateKey(
-                        credentialsId: 'maden-server-key',   // 🔐 Private key ID
+                        credentialsId: 'maden-server-key',
                         keyFileVariable: 'PEM_KEY'
                     )
                 ]) {
