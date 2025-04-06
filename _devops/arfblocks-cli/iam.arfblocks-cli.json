@@ -2,7 +2,7 @@
   "minCliVersion": "2.0.0",
   "project": "IAM Module",
   "description": "IAM modülü için endpoint dokümantasyonu",
-  "company": "Arfware/Hirovo",
+  "company": "mstfa6060",
   "commands": [
     {
       "name": "generate-docs",
@@ -13,7 +13,40 @@
         },
         {
           "key": "output",
-          "value": "/maden/backend/webapp/common/hirovo-api/src/api/base_modules/iam"
+          "value": "../../maden-frontend/frontend-hirovo/common/hirovo-api/src/api/base_modules/iam"
+        },
+        {
+          "key": "outputImports",
+          "value": "// Imports \nimport { AppConfig, api as axios } from 'hirovo-config'; \nimport { ApiService } from '../../../../services';"
+        },
+        {
+          "key": "outputTypes",
+          "value": "// Custom Types \ntype Guid = string; \ntype Double = number;"
+        },
+        {
+          "key": "outputSettings",
+          "value": "// Settings..."
+        },
+        {
+          "key": "nameSpace",
+          "value": "IAMAPI"
+        },
+        {
+          "key": "requestUrl",
+          "value": "AppConfig.IAMUrl"
+        }
+      ]
+    },
+    {
+      "name": "generate-docs",
+      "parameters": [
+        {
+          "key": "targetProject",
+          "value": "BaseModules/IAM/BaseModules.IAM.Application/BaseModules.IAM.Application.csproj"
+        },
+        {
+          "key": "output",
+          "value": "../../mobileapp/hirovo-mobileapp/common/hirovo-api/src/api/base_modules/iam"
         },
         {
           "key": "outputImports",
