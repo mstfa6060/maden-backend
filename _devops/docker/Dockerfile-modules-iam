@@ -9,7 +9,7 @@ WORKDIR /src
 COPY . .
 
 RUN dotnet restore ./Hirovo.sln
-RUN dotnet publish ./BaseModules/IAM/BaseModules.IAM.Api/BaseModules.IAM.Api.csproj -c Release -o /app/publish
+RUN dotnet publish   h ./BaseModules/IAM/BaseModules.IAM.Api/BaseModules.IAM.Api.csproj -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
