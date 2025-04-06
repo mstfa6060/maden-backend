@@ -1,30 +1,29 @@
-# 1️⃣ Temel runtime imajı (sadece çalıştırma için)
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-WORKDIR /app
-EXPOSE 8080
-
-# 2️⃣ Build aşaması (kodun derlenmesi için SDK kullanılıyor)
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+
+
+# Copy everything else and build
+COPY . /src
 WORKDIR /src
+RUN dotnet restore
+RUN dotnet build
 
-# 🔄 Proje dosyalarının tamamını kopyala
-COPY . .
+# Test
 
-# 🔧 Bağımlılıkları indir
-RUN dotnet restore ./Hirovo.sln
+ARG MODE="DEFAULT"
+WORKDIR /src/BaseModules/IAM/BaseModules.IAM.Application.Test
+RUN dotnet run || $([ "${MODE}" = "SKIPTEST" ]) 
 
-# 🛠️ Publish işlemi — ⚠️ yazım hatası vardı: publis → publish
-RUN dotnet publish ./BaseModules/IAM/BaseModules.IAM.Api/BaseModules.IAM.Api.csproj -c Release -o /app/publish
+# Publish
+WORKDIR /src/BaseModules/IAM/BaseModules.IAM.Api/
+RUN dotnet publish -c release -o /Output --no-restore
 
-# 3️⃣ Son aşama — sadece çıktı dosyaları kalacak
-FROM base AS final
-WORKDIR /app
+# Final stage / image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /App
+COPY --from=build /Output .
 
-# 🛡️ appsettings.json'u da dahil et (opsiyonel: zaten publish içine kopyalanmış olabilir)
-COPY ./BaseModules/IAM/BaseModules.IAM.Api/appsettings.json ./BaseModules/IAM/BaseModules.IAM.Api/appsettings.json
+RUN apt update && apt install tzdata -y
+ENV TZ="Europe/Istanbul"
 
-# 🗂️ Build aşamasından publish klasörünü al
-COPY --from=build /app/publish .
-
-# 🚀 Başlangıç komutu
+EXPOSE 8080
 ENTRYPOINT ["dotnet", "BaseModules.IAM.Api.dll"]
