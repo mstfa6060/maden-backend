@@ -22,7 +22,7 @@ jobs:
       - name: Build and push IAM Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./backend
+          context: .
           file: ./_devops/docker/Dockerfile-modules-iam
           push: true
           tags: mstfaock/hirovo-iam-api:latest
@@ -30,7 +30,7 @@ jobs:
       - name: Build and push Hirovo Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./backend
+          context: .
           file: ./_devops/docker/Dockerfile-modules-hirovo
           push: true
           tags: mstfaock/hirovo-hirovo-api:latest
@@ -38,7 +38,7 @@ jobs:
       - name: Build and push API Gateway Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./backend
+          context: .
           file: ./_devops/docker/Dockerfile-api-gateway
           push: true
           tags: mstfaock/hirovo-api-gateway:latest
