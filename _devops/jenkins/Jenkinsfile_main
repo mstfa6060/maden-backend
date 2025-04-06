@@ -15,20 +15,28 @@ pipeline {
                         keyFileVariable: 'PEM_KEY'
                     )
                 ]) {
-                    sh '''
-                        echo "🚀 GitHub Actions tarafından DockerHub’a gönderilen imaj sunucuya deploy ediliyor..."
+sh '''
+echo "🚀 GitHub Actions tarafından DockerHub’a gönderilen imaj sunucuya deploy ediliyor..."
 
-                        ssh -i "$PEM_KEY" -o StrictHostKeyChecking=no $HOST << 'ENDSSH'
-                            echo "🔄 Kodlar güncelleniyor..."
-                            cd /maden/backend
-                            git pull origin main
+ssh -i "$PEM_KEY" -o StrictHostKeyChecking=no $HOST << 'ENDSSH'
+    echo "🔄 Kodlar güncelleniyor..."
 
-                            echo "📦 Docker compose çalıştırılıyor..."
-                            cd /maden/backend/_devops/docker
-                            docker-compose pull
-                            docker-compose up -d --build
-                        ENDSSH
-                    '''
+    # Repo yoksa klonla, varsa pull yap
+    if [ ! -d "/maden/backend/.git" ]; then
+        echo "🌀 Repo ilk kez klonlanıyor..."
+        git clone https://github.com/mstfa6060/maden-backend.git /maden/backend
+    else
+        cd /maden/backend
+        git pull origin main
+    fi
+
+    echo "📦 Docker compose çalıştırılıyor..."
+    cd /maden/backend/_devops/docker
+    docker-compose pull
+    docker-compose up -d --build
+ENDSSH
+'''
+
                 }
             }
         }
