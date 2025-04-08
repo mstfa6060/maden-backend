@@ -10,7 +10,7 @@ $madenRoot = Resolve-Path "$backendPath\.."
 # === CONFIGURABLE PATHS ===
 $cliConfigPath = "$backendPath\_devops\arfblocks-cli\hirovo.arfblocks-cli.json"
 
-$frontendPath = "$madenRoot\maden-frontend\hirovo"
+$frontendPath = "$madenRoot\maden-frontend\frontend-hirovo"
 $frontendBranch = "main"
 
 $mobilePath = "$madenRoot\mobileapp\hirovo-mobileapp"
