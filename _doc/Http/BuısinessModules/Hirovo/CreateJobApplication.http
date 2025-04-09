@@ -18,3 +18,21 @@ Content-Type: application/json
   "jobId": "4309AF39-D063-4CA0-A44E-59D4F3387B23",
   "workerId": "9B8796BF-001C-4C2F-94CE-3404E8A36523"
 }
+
+
+### Tüm Başvuruları Listele (Pagination destekli)
+POST {{Url}}/JobApplications/All
+Authorization: Bearer {{Jwt}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "sorting": null,
+  "filters": [],
+  "pageRequest": {
+    "perPageCount": 20,
+    "currentPage": 1,
+    "listAll": false
+  }
+}
+
