@@ -16,6 +16,9 @@ public class DomainErrors
         public static object JobApplicationAlreadyAccepted { get; set; } = "İş başvurusu zaten kabul edilmiş.";
         public static object JobApplicationAlreadyRejected { get; set; } = "İş başvurusu zaten reddedilmiş.";
         public static object JobApplicationAlreadyCancelled { get; set; } = "İş başvurusu zaten iptal edilmiş.";
+        public static object TitleNotValid { get; set; } = "İlan başlığı geçersiz.";
+        public static object SalaryNotValid { get; set; } = "Maaş 0'dan büyük olmalıdır.";
+
     }
 
     public class WorkerErrors
