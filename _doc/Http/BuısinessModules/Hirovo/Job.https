@@ -23,7 +23,7 @@ Content-Type: application/json
 
 
 
-### Pick
+### Detail
 
 POST {{Url}}/Jobs/Detail  
 Authorization: Bearer {{Jwt}}
@@ -34,3 +34,21 @@ Content-Type: application/json
   "jobId": "5ffb750b-b759-48b3-8b59-7f5017eada23"
 }
 
+
+
+### All
+
+POST {{Url}}/Jobs/All  
+Authorization: Bearer {{Jwt}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "sorting": null,
+  "filters": [],
+  "pageRequest": {
+    "perPageCount": 20,
+    "currentPage": 1,
+    "listAll": false
+  }
+}
