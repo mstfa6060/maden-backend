@@ -82,3 +82,17 @@ Content-Type: application/json
   "jobId": "5ffb750b-b759-48b3-8b59-7f5017eada23",
   "isDeleted": true
 }
+
+
+### Pick
+
+POST {{Url}}/Jobs/Pick  
+Authorization: Bearer {{Jwt}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "selectedIds": [],
+  "keyword": "temizlik",
+  "limit": 10
+}

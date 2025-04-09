@@ -18,6 +18,8 @@ public class DomainErrors
         public static object JobApplicationAlreadyCancelled { get; set; } = "İş başvurusu zaten iptal edilmiş.";
         public static object TitleNotValid { get; set; } = "İlan başlığı geçersiz.";
         public static object SalaryNotValid { get; set; } = "Maaş 0'dan büyük olmalıdır.";
+        public static object LimitMustBeGreaterThanZero { get; set; } = "Limit sıfırdan büyük olmalıdır.";
+
 
     }
 
