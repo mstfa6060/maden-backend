@@ -1,0 +1,20 @@
+
+ @Url= http://localhost:5000
+#  @Url=http://3.88.252.189:5000
+# @Url= https://api-test.toprak.tkholding.com.tr/koopposbackoffice
+
+  @Jwt =  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIyODM2NzJlNC0xYWU4LTQ1YTctYTkxNC1lMmRlZGQwMjgwYjIiLCJnaXZlbl9uYW1lIjoiam9obmRvMWUxIiwidW5pcXVlX25hbWUiOiJKb2huIERvZSIsInBsYXRmb3JtIjoiMCIsInVzZXJTb3VyY2UiOiIwIiwibmJmIjoxNzQyOTk3OTQ3LCJleHAiOjE3NDM2MDI3NDcsImlhdCI6MTc0Mjk5Nzk0NywiYXVkIjoiaWFtLnRvcHJhay50a2hvbGRpbmcuY29tLnRyIn0.bijr_mwoFDm66rGgGtxoAi03FnVwfQOUCewmpEL7msE"
+
+
+
+
+ ### İş Başvurusu Oluştur
+POST {{Url}}/JobApplications/Create
+Authorization: Bearer {{Jwt}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "jobId": "4309AF39-D063-4CA0-A44E-59D4F3387B23",
+  "workerId": "9B8796BF-001C-4C2F-94CE-3404E8A36523"
+}

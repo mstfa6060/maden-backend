@@ -19,10 +19,16 @@ public class DomainErrors
         public static object TitleNotValid { get; set; } = "İlan başlığı geçersiz.";
         public static object SalaryNotValid { get; set; } = "Maaş 0'dan büyük olmalıdır.";
         public static object LimitMustBeGreaterThanZero { get; set; } = "Limit sıfırdan büyük olmalıdır.";
-
-
+        public static object JobIdRequired { get; set; } = "İş ilanı ID'si gereklidir.";
+        public static object WorkerIdRequired { get; set; } = "İşçi ID'si gereklidir.";
+        public static object JobIdNotValid { get; set; } = "İş ilanı ID'si geçersiz.";
+        public static object WorkerIdNotValid { get; set; } = "İşçi ID'si geçersiz.";
+        public static object JobIdNotExist { get; set; } = "İş ilanı bulunamadı.";
     }
-
+    public class JobApplicationErrors
+    {
+        public static object JobAlreadyApplied { get; set; } = "İş ilanına zaten başvurulmuş.";
+    }
     public class WorkerErrors
     {
         public static string WorkerNotFound { get; set; } = "İşçi bulunamadı.";
