@@ -41,3 +41,5 @@ global using Common.Services.ErrorCodeGenerator;
 global using Common.Definitions.Base.Enums;
 global using BusinessModules.Hirovo.Infrastructure.RelationalDB;
 
+global using BusinessModules.Hirovo.Domain.Errors;
+global using BusinessModules.Hirovo.Infrastructure.Services;

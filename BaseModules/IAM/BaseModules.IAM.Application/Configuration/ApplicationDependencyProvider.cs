@@ -30,8 +30,7 @@ public class ApplicationDependencyProvider : ArfBlocksDependencyProvider
 		base.Add<DefinitionDbContextOptions>();
 		base.Add<DefinitionDbContext>();
 		base.Add<IamDbContextOptions>();
-		base.Add<IamDbContext>();
-		// base.Add<IamDocumentDbContext>();
+		base.Add<IamDbContext>(); 
 		base.Add<IamDbValidationService>();
 		base.Add<IamDbVerificationService>();
 

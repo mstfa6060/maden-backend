@@ -24,8 +24,8 @@ public class ApplicationDependencyProvider : ArfBlocksDependencyProvider
         base.Add<DefinitionDbContext>();
         base.Add<HirovoDbContextOptions>();
         base.Add<HirovoModuleDbContext>();
-        // base.Add<HirovoModuleDbValidationService>();
-        // base.Add<HirovoModuleDbVerificationService>();
+        base.Add<HirovoModuleDbValidationService>();
+        base.Add<HirovoModuleDbVerificationService>();
         // base.Add<ManagementDbContextOptions>();
         // base.Add<ManagementDbContext>();
         // base.Add<ManagementDbValidationService>();
@@ -56,6 +56,6 @@ public class ApplicationDependencyProvider : ArfBlocksDependencyProvider
 
 
 
-        
+
     }
 }

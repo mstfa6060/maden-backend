@@ -27,14 +27,6 @@ public enum ModuleCategories
 
 public enum ModuleTypes
 {
-    Platform = 0,
-    Management = 1,
-    Document = 2,
-    Ebys = 3,
-    Cis = 4,
-    EbysDv = 5,
-    KoopPos = 6,
-    Intranet = 7,
-    Pdks = 8,
-    Automate = 9,
+    Hirovo = 0,
+
 }

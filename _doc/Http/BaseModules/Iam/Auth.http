@@ -144,3 +144,13 @@ Content-Type: application/json
 }
 
 
+### detail
+
+POST {{Url}}/Workers/Detail
+Authorization: Bearer {{Jwt}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "userId": "283672e4-1ae8-45a7-a914-e2dedd0280b2"
+}

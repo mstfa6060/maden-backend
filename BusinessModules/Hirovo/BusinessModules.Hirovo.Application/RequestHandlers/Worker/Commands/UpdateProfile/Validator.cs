@@ -33,7 +33,7 @@ public class Validator : IRequestValidator
 		// DB Validations
 		var user = await _dataAccess.GetById(userId);
 		if (user == null || user.UserType != UserType.Worker)
-			throw new ArfBlocksValidationException(ErrorCodeGenerator.GetErrorCode(() => DomainErrors.UserErrors.UserNotFound));
+			throw new ArfBlocksValidationException(ErrorCodeGenerator.GetErrorCode(() => BusinessModules.Hirovo.Domain.Errors.DomainErrors.WorkerErrors.UserIdNotExist));
 	}
 }
 
