@@ -43,3 +43,4 @@ global using BusinessModules.Hirovo.Infrastructure.RelationalDB;
 
 global using BusinessModules.Hirovo.Domain.Errors;
 global using BusinessModules.Hirovo.Infrastructure.Services;
+global using BusinessModules.Hirovo.Domain.Entities;

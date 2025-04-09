@@ -6,7 +6,7 @@
   @Jwt =  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIyODM2NzJlNC0xYWU4LTQ1YTctYTkxNC1lMmRlZGQwMjgwYjIiLCJnaXZlbl9uYW1lIjoiam9obmRvMWUxIiwidW5pcXVlX25hbWUiOiJKb2huIERvZSIsInBsYXRmb3JtIjoiMCIsInVzZXJTb3VyY2UiOiIwIiwibmJmIjoxNzQyOTk3OTQ3LCJleHAiOjE3NDM2MDI3NDcsImlhdCI6MTc0Mjk5Nzk0NywiYXVkIjoiaWFtLnRvcHJhay50a2hvbGRpbmcuY29tLnRyIn0.bijr_mwoFDm66rGgGtxoAi03FnVwfQOUCewmpEL7msE"
 
  
-### Pick
+### Create
 
 POST {{Url}}/Jobs/Create  
 Authorization: Bearer {{Jwt}}
@@ -20,3 +20,17 @@ Content-Type: application/json
   "type": 1,
   "employerId": "283672e4-1ae8-45a7-a914-e2dedd0280b2"
 }
+
+
+
+### Pick
+
+POST {{Url}}/Jobs/Detail  
+Authorization: Bearer {{Jwt}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "jobId": "5ffb750b-b759-48b3-8b59-7f5017eada23"
+}
+

@@ -1,4 +1,4 @@
-namespace BusinessModules.Hirovo.Application.RequestHandlers.Jobs.Queries.Detail;
+namespace BusinessModules.Hirovo.Application.RequestHandlers.Workers.Queries.Detail;
 
 public class Handler : IRequestHandler
 {
@@ -16,9 +16,9 @@ public class Handler : IRequestHandler
 		var requestModel = (RequestModel)payload;
 		var mapper = new Mapper();
 
-		var job = await _dataAccessLayer.GetJobById(requestModel.JobId);
+		var user = await _dataAccessLayer.GetUserById(requestModel.UserId);
 
-		var response = mapper.MapToResponse(job);
+		var response = mapper.MapToResponse(user);
 
 		return ArfBlocksResults.Success(response);
 	}

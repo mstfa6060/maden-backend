@@ -1,4 +1,4 @@
-namespace BusinessModules.Hirovo.Application.RequestHandlers.Jobs.Queries.Detail;
+namespace BusinessModules.Hirovo.Application.RequestHandlers.Workers.Queries.Detail;
 
 public class DataAccess : IDataAccess
 {
@@ -9,8 +9,9 @@ public class DataAccess : IDataAccess
         _dbContext = dependencyProvider.GetInstance<HirovoModuleDbContext>();
     }
 
-    public async Task<Job?> GetJobById(Guid jobId)
+    public async Task<User?> GetUserById(Guid userId)
     {
-        return await _dbContext.Jobs.FirstOrDefaultAsync(j => j.Id == jobId);
+        return await _dbContext.AppUsers
+            .FirstOrDefaultAsync(u => u.Id == userId);
     }
 }

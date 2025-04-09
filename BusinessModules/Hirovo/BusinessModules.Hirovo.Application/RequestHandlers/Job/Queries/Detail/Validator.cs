@@ -1,4 +1,6 @@
-namespace BusinessModules.Hirovo.Application.RequestHandlers.Jobs.Queries.Detail;
+
+
+namespace BusinessModules.Hirovo.Application.RequestHandlers.Workers.Queries.Detail;
 
 public class Validator : IRequestValidator
 {
@@ -14,16 +16,21 @@ public class Validator : IRequestValidator
 	public void ValidateRequestModel(IRequestModel payload, EndpointContext context, CancellationToken cancellationToken)
 	{
 		var requestModel = (RequestModel)payload;
-		var validationResult = new RequestModel_Validator().Validate(requestModel);
 
+		var validationResult = new RequestModel_Validator().Validate(requestModel);
 		if (!validationResult.IsValid)
-			throw new ArfBlocksValidationException(validationResult.ToString("~"));
+		{
+			var errors = validationResult.ToString("~");
+			throw new ArfBlocksValidationException(errors);
+		}
 	}
 
 	public async Task ValidateDomain(IRequestModel payload, EndpointContext context, CancellationToken cancellationToken)
 	{
+		var isCurrentUserSystemAdmin = await _authorizationService.IsSystemAdmin(ModuleTypes.Hirovo);
 		var requestModel = (RequestModel)payload;
-		await _dbValidator.ValidateJobExist(requestModel.JobId);
+
+		await _dbValidator.ValidateUserExist(requestModel.UserId, isCurrentUserSystemAdmin);
 	}
 }
 
@@ -31,7 +38,8 @@ public class RequestModel_Validator : AbstractValidator<RequestModel>
 {
 	public RequestModel_Validator()
 	{
-		RuleFor(x => x.JobId)
-			.NotEmpty().WithMessage(ErrorCodeGenerator.GetErrorCode(() => DomainErrors.JobErrors.IdNotValid));
+		RuleFor(x => x.UserId)
+			.NotNull().WithMessage(ErrorCodeGenerator.GetErrorCode(() => DomainErrors.WorkerErrors.UserIdNotValid))
+			.NotEqual(Guid.Empty).WithMessage(ErrorCodeGenerator.GetErrorCode(() => DomainErrors.WorkerErrors.UserIdNotValid));
 	}
 }

@@ -1,19 +1,18 @@
-namespace BusinessModules.Hirovo.Application.RequestHandlers.Workers.Queries.Detail;
+namespace BusinessModules.Hirovo.Application.RequestHandlers.Jobs.Queries.Detail;
 
 public class Mapper
 {
-    public ResponseModel MapToResponse(User user)
+    public ResponseModel MapToResponse(Job job)
     {
-        var responseModel = new ResponseModel()
+        return new ResponseModel()
         {
-            Id = user.Id,
-            PhoneNumber = user.PhoneNumber,
-            BirthDate = user.BirthDate,
-            City = user.City,
-            District = user.District,
-            IsAvailable = user.IsAvailable
+            Id = job.Id,
+            Title = job.Title,
+            Description = job.Description,
+            Salary = job.Salary,
+            Type = job.Type,
+            Status = job.Status,
+            EmployerId = job.EmployerId
         };
-
-        return responseModel;
     }
 }
