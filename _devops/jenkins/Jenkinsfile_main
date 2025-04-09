@@ -7,6 +7,14 @@ pipeline {
     }
 
     stages {
+        stage('DockerHub imajı hazır mı?') {
+            steps {
+                echo "⏳ DockerHub'daki imaj kontrol ediliyor..."
+                sh 'chmod +x _devops/scripts/wait-for-image.sh'
+                sh './_devops/scripts/wait-for-image.sh'
+            }
+        }
+
         stage('Sunucuya Deploy Et') {
             steps {
                 withCredentials([
@@ -15,7 +23,7 @@ pipeline {
                         keyFileVariable: 'PEM_KEY'
                     )
                 ]) {
-sh '''
+                    sh '''
 echo "🚀 GitHub Actions tarafından DockerHub’a gönderilen imaj sunucuya deploy ediliyor..."
 
 ssh -i "$PEM_KEY" -o StrictHostKeyChecking=no $HOST << 'ENDSSH'
@@ -36,7 +44,6 @@ ssh -i "$PEM_KEY" -o StrictHostKeyChecking=no $HOST << 'ENDSSH'
     docker-compose up -d --build
 ENDSSH
 '''
-
                 }
             }
         }
