@@ -1,4 +1,4 @@
-namespace BusinessModules.Hirovo.Application.RequestHandlers.Workers.Commands.UpdateProfile;
+namespace BusinessModules.Hirovo.Application.RequestHandlers.Jobs.Commands.UpdateProfile;
 
 public class Verificator : IRequestVerificator
 {

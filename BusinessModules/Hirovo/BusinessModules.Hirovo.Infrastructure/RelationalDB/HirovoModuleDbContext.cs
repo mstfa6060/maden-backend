@@ -1,4 +1,7 @@
-﻿ 
+﻿
+
+
+using BusinessModules.Hirovo.Domain.Entities;
 
 namespace BusinessModules.Hirovo.Infrastructure.RelationalDB;
 
@@ -7,6 +10,8 @@ public class HirovoModuleDbContext : DefinitionDbContext, IHirovoModuleDbContext
 	public HirovoModuleDbContext(HirovoDbContextOptions customDbContextOptions) : base(customDbContextOptions.DefinitionDbContextOptions)
 	{ }
 
+	public DbSet<Job> Jobs { get; set; }
+	public DbSet<JobApplication> JobApplications { get; set; }
 
 	protected override void OnModelCreating(ModelBuilder modelBuilder)
 	{
