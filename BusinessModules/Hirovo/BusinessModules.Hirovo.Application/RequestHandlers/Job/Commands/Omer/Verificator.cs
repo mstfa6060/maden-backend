@@ -1,4 +1,4 @@
-namespace BusinessModules.Hirovo.Application.RequestHandlers.Jobs.Commands.Create;
+namespace BusinessModules.Hirovo.Application.RequestHandlers.Jobs.Commands.Omer;
 
 public class Verificator : IRequestVerificator
 {

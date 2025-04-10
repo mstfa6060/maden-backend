@@ -96,3 +96,22 @@ Content-Type: application/json
   "keyword": "temizlik",
   "limit": 10
 }
+
+
+
+
+### Create
+
+POST {{Url}}/Jobs/Omer  
+Authorization: Bearer {{Jwt}}
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title": "Ömer Ceylan",
+  "description": "Ofis temizliği için haftada 3 gün çalışacak personel aranıyor.",
+  "salary": 550,
+  "type": 1,
+  "employerId": "283672e4-1ae8-45a7-a914-e2dedd0280b2"
+}
+
